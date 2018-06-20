@@ -6,7 +6,7 @@
       "published": true,
       "title": "First Blog Post",
       "description": "This is my first blog post.",
-      "date": {
+      "createdate": {
         "year": "2017",
         "month": "11",
         "day": "01",
@@ -21,7 +21,7 @@
       "published": true,
       "title": "Second Blog Post",
       "description": "This is my second blog post.",
-      "date": {
+      "createdate": {
         "year": "2017",
         "month": "11",
         "day": "02",
@@ -36,7 +36,7 @@
       "published": true,
       "title": "Third Blog Post",
       "description": "This is my third blog post.",
-      "date": {
+      "createdate": {
         "year": "2017",
         "month": "11",
         "day": "03",
@@ -51,7 +51,7 @@
       "published": true,
       "title": "Son Blog Post",
       "description": "This is my son blog post.",
-      "date": {
+      "createdate": {
         "year": "2018",
         "month": "06",
         "day": "19",

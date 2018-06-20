@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <Authors>Ahmet Selçuk Özyurt</Authors>
+    <Description>A Very Simple Blog Engine For My Personal Website</Description>
   </PropertyGroup>
 
   <ItemGroup>

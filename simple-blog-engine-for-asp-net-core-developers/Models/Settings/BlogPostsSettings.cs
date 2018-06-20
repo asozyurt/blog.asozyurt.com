@@ -27,7 +27,7 @@ namespace SimpleBlogEngine.Models
 
 		public BlogPostsSettings CalculateMetaData()
 		{
-			Blogs = Blogs.Where(b => b.Published).OrderByDescending(b => new DateTime(b.Date.Year, b.Date.Month, b.Date.Day)).ToList(); // Do I need Blogs object lock() here or does asp.net core do that for me?
+			Blogs = Blogs.Where(b => b.Published).OrderByDescending(b => new DateTime(b.CreateDate.Year, b.CreateDate.Month, b.CreateDate.Day)).ToList(); // Do I need Blogs object lock() here or does asp.net core do that for me?
 
 			if(Meta == null) {
 				Meta = new BlogPostsSettings_MetaData();
