@@ -5,6 +5,7 @@
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <Authors>Ahmet Selçuk Özyurt</Authors>
     <Description>A Very Simple Blog Engine For My Personal Website</Description>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,21 @@
   <ItemGroup>
     <Folder Include="Settings\Custom\" />
     <Folder Include="Views\Custom\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\main\easing.js" />
+    <None Include="wwwroot\js\main\instafeed.min.js" />
+    <None Include="wwwroot\js\main\jquery.appear.min.js" />
+    <None Include="wwwroot\js\main\jquery.magnific-popup.js" />
+    <None Include="wwwroot\js\main\jquery.smooth-scroll.js" />
+    <None Include="wwwroot\js\main\jquery.ui.totop.min.js" />
+    <None Include="wwwroot\js\main\lang.js" />
+    <None Include="wwwroot\js\main\masonry.min.js" />
+    <None Include="wwwroot\js\main\owl.carousel.js" />
+    <None Include="wwwroot\js\main\placeholders.min.js" />
+    <None Include="wwwroot\js\main\script.js" />
+    <None Include="wwwroot\js\main\timer.js" />
   </ItemGroup>
 
 </Project>
