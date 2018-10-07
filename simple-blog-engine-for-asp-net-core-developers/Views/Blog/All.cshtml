@@ -1,6 +1,6 @@
 ﻿@inject Microsoft.Extensions.Options.IOptionsMonitor<BlogPostsSettings> blogPostConfigMonitor
 @{
-    ViewData["Title"] = "All blog posts";
+    ViewData["Title"] = "Tüm Yazılar";
 }
 
 @Html.Partial("_allBlogPostsHeader")
@@ -11,9 +11,10 @@
     {
         var postURL = "//" + Context.Request.Host + Url.Action("ViewBlogPost", "Blog", new { year = blogPost.CreateDate.Year, Month = blogPost.CreateDate.Month.ToString("00"), Slug = blogPost.Slug });
         <div class="blog-post-list-item">
+            <img class="img-circle img-thumbnail" src="@blogPost.Image" />
             <h4><a href="@postURL">@blogPost.Title</a></h4>
             <p style="margin-bottom:0;">@blogPost.Description</p>
-            <div><a href="@postURL">Read more...</a></div>
+            <div><a href="@postURL">Devamını Oku...</a></div>
         </div>
     }
 }

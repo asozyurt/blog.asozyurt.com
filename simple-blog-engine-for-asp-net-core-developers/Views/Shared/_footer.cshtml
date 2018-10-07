@@ -1,15 +1,6 @@
 ﻿@inject Microsoft.Extensions.Options.IOptionsMonitor<SiteSettings> siteSettings
 
-@{if(!string.IsNullOrEmpty(siteSettings.CurrentValue.MetaData.TwitterUserName)) {
-<p class="m-0 text-center">
-	<a title="@siteSettings.CurrentValue.Owner on Twitter" target="_blank" href="https://twitter.com/@siteSettings.CurrentValue.MetaData.TwitterUserName">@@@siteSettings.CurrentValue.MetaData.TwitterUserName</a>
-</p>
-}}
 @Html.Partial("_hook_footerMiddle")
 <p class="m-0 text-center">
-	<span>Copyright &copy; @siteSettings.CurrentValue.Owner @DateTime.Now.Year</span>
-</p>
-
-<p class="m-0 text-center" style="padding-top:25px; font-size:80%; opacity:0.7;">
-	<span>Powered by <a href="https://github.com/GarethElms/simple-blog-engine-for-asp-net-core">Simple Blog Engine for ASP.NET Core</a></span>
+    <span>&copy; @siteSettings.CurrentValue.Owner @DateTime.Now.Year - Ahmet Selçuk Özyurt</span>
 </p>

@@ -4,63 +4,67 @@
   "blogs": [
     {
       "published": true,
-      "title": "First Blog Post",
-      "description": "This is my first blog post.",
+      "title": "Harweast Developer Union",
+      "description": "Harweast Developer Union",
+      "image": "../img/harweastGuy.png",
       "createdate": {
         "year": "2017",
-        "month": "11",
-        "day": "01",
-        "display": "Nov 1st, 2017"
+        "month": "03",
+        "day": "21",
+        "display": "21 Mar 2017"
       },
-      "author": "Author",
-      "slug": "first-blog-post",
-      "view": "firstBlogPost.cshtml",
-      "tags": [ "blog", "first" ]
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "harweast-developer-union",
+      "view": "harweast-developer-union.cshtml",
+      "tags": [ "developers", "harweast", "team" ]
     },
     {
       "published": true,
-      "title": "Second Blog Post",
-      "description": "This is my second blog post.",
+      "title": "Xamarin Forms Swipe Gesture",
+      "description": "Xamarin Forms Swipe Gesture",
+      "image": "../img/xamarinSwipe.jpg",
       "createdate": {
         "year": "2017",
-        "month": "11",
-        "day": "02",
-        "display": "Nov 2nd, 2017"
+        "month": "04",
+        "day": "13",
+        "display": "13 Nis 2017"
       },
-      "author": "Author",
-      "slug": "second-blog-post",
-      "view": "secondBlogPost.cshtml",
-      "tags": [ "blog", "second" ]
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "xamarin-forms-swipe-gesture",
+      "view": "xamarin-forms-swipe-gesture.cshtml",
+      "tags": [ "swipe", "swipe gesture", "Xamarin", "xamarin behaviors", "xamarin forms" ]
     },
     {
       "published": true,
-      "title": "Third Blog Post",
-      "description": "This is my third blog post.",
+      "title": "Nissan Qashqai 1.2 DIG-T Xtronic Skypack Yorumlarım",
+      "description": "Nissan Qashqai 1.2 DIG-T Xtronic Skypack Yorumlarım.",
+      "image": "../img/nissanqq.jpeg",
       "createdate": {
         "year": "2017",
-        "month": "11",
-        "day": "03",
-        "display": "Nov 3rd, 2017"
+        "month": "08",
+        "day": "17",
+        "display": "17 Agu 2017"
       },
-      "author": "Author",
-      "slug": "third-blog-post",
-      "view": "thirdBlogPost.cshtml",
-      "tags": [ "blog", "third" ]
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "nissan-qashqai-yorumlarim",
+      "view": "nissan-qashqai-yorumlarim.cshtml",
+      "tags": [ "araba inceleme", "car", "car review", "ilk izlenimler", "nissan", "qashqai", "skypack", "xtronic", "yakıt tüketimi" ]
     },
     {
       "published": true,
-      "title": "Son Blog Post",
-      "description": "This is my son blog post.",
+      "title": "Bilgisayarlarda Bilinen İlk Bug",
+      "description": "Bilgisayarlarda Bilinen İlk Bug",
+      "image": "~/img/hugeBug.jpg",
       "createdate": {
-        "year": "2018",
-        "month": "06",
-        "day": "19",
-        "display": "Nov 3rd, 2017"
+        "year": "2017",
+        "month": "08",
+        "day": "23",
+        "display": " 23 Agu 2017"
       },
-      "author": "Author",
-      "slug": "last-blog-post",
-      "view": "thirdBlogPost.cshtml",
-      "tags": [ "blog", "third" ]
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "bilgisayarlarda-bilinen-ilk-bug",
+      "view": "bilgisayarlarda-bilinen-ilk-bug.cshtml",
+      "tags": [ "bilgisayar", "bug", "computer", "güve", "grace hopper", "moth" ]
     }
   ]
 }

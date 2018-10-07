@@ -13,6 +13,7 @@ namespace SimpleBlogEngine.Models
         public string Author { get; set; }
         public string Slug { get; set; }
         public string View { get; set; }
+        public string Image { get; set; }
     }
 
     public class BlogPostDate
