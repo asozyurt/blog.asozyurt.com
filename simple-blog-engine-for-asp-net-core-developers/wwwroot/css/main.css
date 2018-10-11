@@ -651,8 +651,8 @@ a.mobile-btn {
         width: 45px;
     }
 
-.italic{
-    font-style:italic;
+.italic {
+    font-style: italic;
 }
 
 .serv-ico, .serv-det {
@@ -679,7 +679,7 @@ a.mobile-btn {
 
     .serv-det h5 {
         text-transform: uppercase;
-        font-weight:bold;
+        font-weight: bold;
     }
 
 
@@ -1732,13 +1732,14 @@ ul.latest-post a {
     }
 }
 
-@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation: portrait) {
+@media only screen and (min-device-width : 1367px) and (orientation: landscape) {
 
     .socials li a i {
         font-size: 26px;
     }
+}
 
-
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation: portrait) {
 
     input, textarea {
         -webkit-appearance: none;
@@ -2049,6 +2050,7 @@ ul.latest-post a {
     .info-det {
         width: 100%;
     }
+
     .block-service {
         text-align: center;
     }
@@ -2581,14 +2583,15 @@ ul.latest-post a {
     .serv-det, .info-det {
         width: 100%;
     }
-    
+
     .block-service {
         text-align: center;
     }
-    .serv-ico
-    {
-        float:unset;
+
+    .serv-ico {
+        float: unset;
     }
+
     .block-service .col-sm-4.img {
         display: none;
     }

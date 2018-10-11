@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="internal-nlog.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.4.1" />
@@ -36,6 +40,12 @@
     <None Include="wwwroot\js\main\placeholders.min.js" />
     <None Include="wwwroot\js\main\script.js" />
     <None Include="wwwroot\js\main\timer.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\_blogSource\harweast-developer-union.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>
