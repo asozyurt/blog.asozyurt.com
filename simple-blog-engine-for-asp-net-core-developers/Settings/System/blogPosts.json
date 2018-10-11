@@ -6,7 +6,7 @@
       "published": true,
       "title": "Harweast Developer Union",
       "description": "Harweast Developer Union",
-      "image": "~/img/harweastGuy.png",
+      "image": "/img/harweastGuy.png",
       "createdate": {
         "year": "2017",
         "month": "03",
@@ -22,7 +22,7 @@
       "published": true,
       "title": "Xamarin Forms Swipe Gesture",
       "description": "Xamarin Forms Swipe Gesture",
-      "image": "~/img/xamarinSwipe.jpg",
+      "image": "/img/xamarinSwipe.jpg",
       "createdate": {
         "year": "2017",
         "month": "04",
@@ -38,7 +38,7 @@
       "published": true,
       "title": "Nissan Qashqai 1.2 DIG-T Xtronic Skypack Yorumlarım",
       "description": "Nissan Qashqai 1.2 DIG-T Xtronic Skypack Yorumlarım.",
-      "image": "~/img/nissanqq.jpg",
+      "image": "/img/nissanqq.jpg",
       "createdate": {
         "year": "2017",
         "month": "08",
@@ -54,7 +54,7 @@
       "published": true,
       "title": "Bilgisayarlarda Bilinen İlk Bug",
       "description": "Bilgisayarlarda Bilinen İlk Bug",
-      "image": "~/img/hugeBug.jpg",
+      "image": "/img/hugeBug.jpeg",
       "createdate": {
         "year": "2017",
         "month": "08",

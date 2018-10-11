@@ -258,6 +258,7 @@ p.short-email {
     position: relative;
     text-align: left;
     padding-left: 20px;
+    display: none;
 }
 
 
@@ -333,12 +334,11 @@ a.mobile-btn {
     display: none;
 }
 
+.menu-first-last-item {
+    border-right: 1px solid #eaeaea;
+}
 /*End main navigation*/
-
-
-
 /*About section*/
-
 .block-about {
     padding: 95px 50px 46px;
     position: relative;
@@ -2157,6 +2157,10 @@ ul.latest-post a {
             padding-bottom: 20px;
         }
 
+    .mobile-menu-holder {
+        display: block;
+    }
+
     a.mobile-btn {
         display: inline-block;
         position: absolute;
@@ -2444,6 +2448,10 @@ ul.latest-post a {
         .main-nav .menu.second {
             padding-bottom: 20px;
         }
+
+    .mobile-menu-holder {
+        display: block;
+    }
 
     a.mobile-btn {
         display: inline-block;
