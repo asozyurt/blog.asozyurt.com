@@ -1,7 +1,84 @@
 ﻿@model BlogPost
 
-<p>Morbi volutpat, risus quis eleifend vulputate, libero lorem ullamcorper neque, eget molestie ante nisi malesuada dolor. Proin consectetur sem risus, sit amet egestas nisi lobortis non. Duis orci metus, rutrum sed sollicitudin eu, elementum sit amet arcu. Etiam non neque non justo dignissim sodales. Aenean sed tincidunt nibh, a aliquet magna. Praesent at nulla sit amet arcu ullamcorper mollis suscipit non nulla. Nunc blandit ultricies arcu, ut iaculis lacus auctor id. Praesent gravida sagittis leo. In hac habitasse platea dictumst. Pellentesque ac augue euismod, posuere dolor et, volutpat diam. Mauris commodo tempor placerat. Mauris vitae iaculis velit. Nullam tempus, tortor id iaculis euismod, nunc ante vehicula lorem, a lobortis lectus purus et nibh. Nulla efficitur mollis enim vitae pulvinar. Nam sagittis, neque id ultrices mattis, dui odio cursus augue, eu tristique velit dolor eu sapien.</p>
+<p class="text-justify">
+    Xamarin Formstaki temel sorunlardan birisi de Gesture (Kullanıcı Etkileşimleri) ların yetersiz olması. Pan (Kaydırma), Pinch (Çift Parmak) ve Tap (Tıklama) hareketleri için bir yapı var evet ama çoğu uygulamada kullandığımız Swipe (Kaydırma) için bir yapı yok.
+</p>
+<br />
+<p class="text-justify">  Universalist Dergi uygulamasını ilk yapıp arkadaşlardan test etmelerini istediğimde hemen hepsinin ilk söylediği şey sayfalar arası geçişte butonları kullanmak zorunda olmanın can sıkıcı olduğuydu. Haklılar !</p>
+<br />
+<p class="text-center"><img class="img-fluid" title="title" src="~/img/xamarinSwipe.jpg" /></p>
+<br />
+<p class="text-justify">
+    İnternette uzunca bir araştırma yapmama rağmen bu ihtiyacı karşılayacak bir çözümle karşılaşmadım. Tam vazgeçmiştim, can sıkıcı da olsa butonlarla Store a çıkacaktım ki aklıma insanlık için tırt ama benim için dahiyane bir çözüm geldi. Geçtim bilgisayarın başına, bir iki ufak deneme yaptım. Çalıştı !
+<p />
+<br />
+    Bulduğum çözüm, halihazırda yakaladığım Pan hareketini hız ve doğrultusunu hesaplayarak gerçekte istenenin Swipe olup olmadığını anlamak. Bunu da behavior a küçük bir eklenti yaparak hallettim. Mantık;
+<br />
+<br />
+<ul>
+    <li>* Pan hareketinin başlangıç ve bitiş zamanlarını tut,</li>
+    <li>* Pan hareketinde X ve Y koordinatlarının değişimlerini bul,</li>
+    <li>* X koordinatı 35 birimden fazla değiştiyse ve bu değişim 1500000 tick süresinden daha az bir sürede gerçekleştiyse Swipe yapılmak istenmiştir. Değişimin yönüne göre sağ veya sol olmasına karar ver.</li>
+</ul>
+<br />
+<p class="text-justify">
+    Ben bu projede kullanmadım ama aynı mantıkla Y koordinatındaki değişimi de yakalayıp aşağı/yukarı kaydırma hareketleri de yakalanabilir.
+</p>
+<div class="block-quote">
+    <i class="icon-quote"></i>
+    <blockquote>
+        private void OnPanUpdated(object sender, PanUpdatedEventArgs e)<br />
+        {<br />
+        if (_parent == null || !IsTranslateEnabled)<br />
+        {return;}<br />
+        <br />
+        switch (e.StatusType)<br />
+        {<br />
+        case GestureStatus.Started:<br />
+        panStartX = _xOffset;<br />
+        panStartY = _yOffset;<br />
+        panStartTime = DateTime.Now.Ticks;<br />
+        break;<br />
+        case GestureStatus.Running:<br />
+        _parent.Content.TranslationX = _xOffset + e.TotalX;<br />
+        _parent.Content.TranslationY = _yOffset + e.TotalY;<br />
+        break;<br />
+        case GestureStatus.Completed:<br />
+        _xOffset = _parent.Content.TranslationX;<br />
+        _yOffset = _parent.Content.TranslationY;<br />
+        <br />
+        if (_currentScale == 1)<br />
+        {<br />
+        panEndTime = DateTime.Now.Ticks;<br />
+        if (panEndTime – panStartTime < 1500000)<br />
+        {<br />
+        double yDifference = panStartY – _yOffset;<br />
+        double xDifference = panStartX – _xOffset;<br />
+        <br />
+        if (yDifference > -100 && yDifference < 100
+        && (xDifference < -35 || xDifference > 35))<br />
+        {<br />
+        // If x is bigger than 0 sliding direction is right, otherwise left<br />
+        MessagingCenter.Send(this, xDifference > 0 ? Constants.RIGHT_SLIDE : Constants.LEFT_SLIDE);<br />
+        }<br />
+        panStartX = 0;<br />
+        panStartY = 0;<br />
+        }<br />
+        }<br />
+        break;<br />
+        }<br />
+        }
+    </blockquote>
+</div>
+<br />
+<p class="text-justify">
+    Projede yalnızca Image bileşeni için denedim, diğer bileşenlere de uygulanabileceğini düşünüyorum, çünkü zaten Image için olan örnekte de tüm event ler ContentView a tanımlanıyor. Yeni bir proje açıp bu örnekleri de eklemeyi düşünüyorum. Tamamladığımda buradan paylaşırım.
+</p>
+<p class="text-justify">
 
-<p>Morbi ut ante id dolor feugiat ultrices eleifend non turpis. Proin lacus justo, feugiat eget ultricies id, accumsan quis diam. Vestibulum nulla lorem, rutrum eu sollicitudin sit amet, interdum sit amet erat. Nam velit felis, sollicitudin id placerat eget, blandit in erat. Quisque erat ante, elementum ac ultrices eget, tincidunt nec odio. Integer ornare euismod sem, nec tincidunt nisi tincidunt porttitor. Nam enim magna, dictum quis commodo ut, commodo ac nisl. Nullam luctus risus non arcu aliquam vulputate. Donec tristique metus mollis, malesuada purus vitae, cursus diam. Fusce pulvinar ex ac massa laoreet, at rhoncus ipsum viverra. Curabitur dignissim consequat dolor, at blandit ante ultrices vulputate. Praesent tempor in metus nec hendrerit. Vestibulum ut rhoncus mauris, sed tincidunt mi. Duis quis suscipit tellus.</p>
+    Projenin koduna <a href="https://github.com/asozyurt/universalistDergiRc" target="_blank">şuradan</a>, yalnızca bu kısım yeterli derseniz de ZoomImageBehavior koduna <a href="https://github.com/asozyurt/universalistDergiRc/blob/master/UniversalistDergiRC/Core/ZoomImageBehavior.cs" target="_blank">şuradan</a> ulaşabilirsiniz.
+</p>
+<p class="text-justify">
+    Herkese kolay gelsin.
+</p>
 
-<p><img class="img-fluid" title="title" src="~/img/xamarinSwipe.jpg" /></p>	

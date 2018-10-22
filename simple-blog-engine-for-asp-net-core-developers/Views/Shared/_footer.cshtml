@@ -1,6 +1,27 @@
 ﻿@inject Microsoft.Extensions.Options.IOptionsMonitor<SiteSettings> siteSettings
 
 @Html.Partial("_hook_footerMiddle")
-<p class="m-0 text-center">
-    <span>&copy; @siteSettings.CurrentValue.Owner @DateTime.Now.Year - Ahmet Selçuk Özyurt</span>
-</p>
+
+<footer class="footer t-center">
+
+    <!--Container-->
+    <div class="container">
+        <!--Row-->
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="socials round pb-20">
+                    <li><a href="https://www.linkedin.com/in/asozyurt"><i class="icon-linkedin-circled"></i><span>LinkedIn</span></a></li>
+                    <li><a href="https://instagram.com/asozyurt"><i class="icon-instagram-circled"></i><span>Instagram</span></a></li>
+                    <li><a href="https://twitter.com/asozyurt"><i class="icon-twitter-circled"></i><span>Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/asozyurt"><i class="icon-facebook-circled"></i><span>Facebook</span></a></li>
+                </ul>
+                <img class="footer-signature" src="http://www.asozyurt.com/img/main/signature.jpg">
+                <hr>
+            </div>
+        </div>
+        <!--End row-->
+    </div>
+    <!--End container-->
+
+
+</footer>

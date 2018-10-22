@@ -10,18 +10,18 @@
 
 @Html.Partial("_hook_blogPostBefore", Model)
 
-<h2 class="my-4">
+<h2 class="my-4 text-center" style="font-size: x-large!important; margin-top: 50px !important;">
     <a href="@postURL">@Model.Title</a>
 </h2>
 
-<div class="blogpost-meta">
+<div class="blogpost-meta text-center">
     @Html.Partial("_hook_blogPostMetaTop", Model)
     <span>@Model.CreateDate.Display</span>
-    <span> by @Model.Author</span>
+    <span> @Model.Author</span>
     @if (disqusSettings.CurrentValue.IsEnabled)
     {
         <span class="separator">/</span>
-        <a href="@postURL#disqus_thread">Comments</a>
+        <a href="@postURL#disqus_thread">Yorumlar</a>
     }
     @Html.Partial("_hook_blogPostMetaBottom", Model)
 </div>
@@ -73,7 +73,7 @@
 else if (disqusSettings.CurrentValue.IsEnabled)
 {
     <div>
-        <a href="@postURL#disqus_thread">Comments</a>
+        <a href="@postURL#disqus_thread">Yorumlar</a>
     </div>
 }
 

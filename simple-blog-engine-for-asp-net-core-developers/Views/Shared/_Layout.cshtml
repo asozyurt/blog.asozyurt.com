@@ -29,7 +29,7 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container pl-4 pr-0">
         <div class="row header-row-container">
             <div class="col-xs-12 header-row">
                 @Html.Partial("_hook_headerTop")
@@ -43,27 +43,29 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 col-lg-8 col-xl-9 main-body">
+            <div class="col-sm-12 col-lg-8 col-xl-9 main-body pl-0 pr-20">
                 @Html.Partial("_hook_bodyTop")
                 @RenderBody()
                 @Html.Partial("_hook_bodyBottom")
             </div>
-            <div class="col-xs-12 col-lg-4 col-xl-3 sidebar">
+            <div class="col-xs-12 col-lg-4 col-xl-3 sidebar bg-grey pl-0 pr-0">
                 <div class="hidden-md-down sidebar-spacer"></div>
-                @Html.Partial("_hook_sideBarTop")
-                @Html.Partial("_allTagsList", blogPostConfigMonitor.CurrentValue.Meta.Tags)
-                @Html.Partial("_recentPosts", blogPostConfigMonitor.CurrentValue)
-                @Html.Partial("_hook_sideBarBottom")
+                <div class="block-sidebar bg-grey clearfix">
+                    @Html.Partial("_hook_sideBarTop")
+                    @Html.Partial("_recentPosts", blogPostConfigMonitor.CurrentValue)
+                    @Html.Partial("_allTagsList", blogPostConfigMonitor.CurrentValue.Meta.Tags)
+                    @Html.Partial("_hook_sideBarBottom")
+                </div>
             </div>
         </div>
     </div>
-    <footer class="bg-dark">
-        <div class="container">
-            @Html.Partial("_hook_footerTop")
-            @Html.Partial("_footer")
-            @Html.Partial("_hook_footerBottom")
-        </div>
-    </footer>
+    @*<footer class="bg-dark">*@
+    <div class="container">
+        @Html.Partial("_hook_footerTop")
+        @Html.Partial("_footer")
+        @Html.Partial("_hook_footerBottom")
+    </div>
+    @*   </footer>*@
 
     @Html.Partial("_scriptsMain")
     @Html.Partial("_hook_scriptsCustom")

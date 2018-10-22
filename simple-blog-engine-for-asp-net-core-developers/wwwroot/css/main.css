@@ -265,7 +265,7 @@ p.short-email {
 a.mobile-btn {
     color: #33373d;
     font-size: 20px;
-    position: absolute;
+    position: sticky;
     right: 0;
     display: none;
 }
@@ -336,6 +336,10 @@ a.mobile-btn {
 
 .menu-first-last-item {
     border-right: 1px solid #eaeaea;
+}
+
+.full-width {
+    width: 100%;
 }
 /*End main navigation*/
 /*About section*/
@@ -1633,7 +1637,7 @@ ul.latest-post a {
 
 .socials.round {
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 75%;
 }
 
     .socials.round li {
@@ -1681,6 +1685,9 @@ ul.latest-post a {
         text-decoration: underline;
     }
 
+.footer {
+    background-color: white !important;
+}
 
 /*End contact section*/
 
@@ -1808,7 +1815,7 @@ ul.latest-post a {
     }
 
     .socials.round {
-        max-width: 60%;
+        max-width: 75%;
     }
 
     .footer hr, .block-share hr {
@@ -1897,7 +1904,7 @@ ul.latest-post a {
     }
 
     .socials.round {
-        max-width: 60%;
+        max-width: 75%;
     }
 
     .socials li a i {
@@ -1947,7 +1954,7 @@ ul.latest-post a {
 
     a.mobile-btn {
         display: inline-block;
-        position: absolute;
+        position: sticky;
         top: 23px;
         right: 15px;
         z-index: 1001;
@@ -2163,7 +2170,7 @@ ul.latest-post a {
 
     a.mobile-btn {
         display: inline-block;
-        position: absolute;
+        position: sticky;
         top: 23px;
         right: 15px;
         z-index: 1001;
@@ -2438,7 +2445,7 @@ ul.latest-post a {
     }
 
     .main-nav {
-        min-height: 65px;
+        min-height: 50px;
     }
 
         .main-nav .menu.first {
@@ -2455,7 +2462,7 @@ ul.latest-post a {
 
     a.mobile-btn {
         display: inline-block;
-        position: absolute;
+        position: sticky;
         top: 23px;
         right: 15px;
         z-index: 1001;

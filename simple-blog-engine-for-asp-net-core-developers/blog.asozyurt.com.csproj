@@ -1,12 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <Authors>Ahmet Selçuk Özyurt</Authors>
     <Description>A Very Simple Blog Engine For My Personal Website</Description>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Custom\**" />
+    <Content Remove="Views\Custom\**" />
+    <EmbeddedResource Remove="Views\Custom\**" />
+    <None Remove="Views\Custom\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="internal-nlog.txt" />
@@ -24,7 +31,6 @@
 
   <ItemGroup>
     <Folder Include="Settings\Custom\" />
-    <Folder Include="Views\Custom\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +50,12 @@
 
   <ItemGroup>
     <Content Update="Views\_blogSource\harweast-developer-union.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\_blogSource\mosx-arac-durum-kontrol-cihazi.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\_blogSource\xamarin-forms-ile-image-zoom.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>

@@ -2,29 +2,83 @@
 @inject Microsoft.Extensions.Options.IOptionsMonitor<SiteSettings> siteSettings
 @inject Microsoft.Extensions.Options.IOptionsMonitor<DisqusSettings> disqusSettings
 @{
-	ViewData["Title"] = "Home Page";
-	ViewData["Description"] = siteSettings.CurrentValue.Description;
-	ViewBag.DontShowComments = true;
-	ViewBag.DontShowAddThis = true;
-	ViewBag.PageId = "home";
+    ViewData["Title"] = "Home Page";
+    ViewData["Description"] = siteSettings.CurrentValue.Description;
+    ViewBag.DontShowComments = true;
+    ViewBag.DontShowAddThis = true;
+    ViewBag.PageId = "home";
 }
 
-@{if(Model.PageOfBlogPosts != null && Model.PageOfBlogPosts.Count > 0) {
-	foreach(var blogPost in Model.PageOfBlogPosts) {
-	<div class="blog-list-container">
-		@Html.Partial("~/Views/Blog/ViewBlogPost.cshtml", blogPost)
-		<hr />
-	</div>
-	}
-} else {
-	<p></p>
-}}
+<!--Blog section-->
+<section id="blog" class="blog pt-50 pb-10 bg-grey">
+
+    <!--Block content-->
+    <div class="block-content">
+        <!--Container-->
+        <div class="container ">
+            <!--Row-->
+            <div class="block-posts">
+                @{if (Model.PageOfBlogPosts != null && Model.PageOfBlogPosts.Count > 0)
+                    {
+                        foreach (var blogPost in Model.PageOfBlogPosts)
+                        {
+                            var postURL = "//" + Context.Request.Host + Url.Action("ViewBlogPost", "Blog", new { year = blogPost.CreateDate.Year, Month = blogPost.CreateDate.Month.ToString("00"), Slug = blogPost.Slug });
+                            var imageURL = "//" + Context.Request.Host + blogPost.Image.Replace("~", string.Empty);
+                            <div class="row">
+                                <div class="post mb-30 mt-15 mr-1 ml-1 full-width">
+                                    <!--Post media-->
+                                    <!--End post media-->
+                                    <!--Post details-->
+                                    <div class="post-details bg-white pb-20">
+                                        <h4 class="uppercase pt-15 pb-15 bold"><a href="@postURL">@blogPost.Title</a></h4>
+                                        <!--Post meta-->
+                                        <div class="post-media">
+                                            <ul>
+                                                <li><a href="@postURL"><img class="pl-3 pr-3 full-width" src="@imageURL" alt="" /></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="post-meta t-center pt-10 pb-10">
+                                            <ul class="clearfix">
+                                                <li class="date"> @blogPost.CreateDate.Display</li>
+                                                <li><i class="icon-user-1"></i><span><a href="#"> @blogPost.Author</a></span></li>
+                                                <li><i class="icon-layout"></i><span>Kategori<a href="#"> Web Design</a></span></li>
+                                            </ul>
+                                        </div>
+                                        <!--End post meta-->
+
+                                        <p class="pt-15 pb-20">@blogPost.Description</p>
+
+                                        <a class="more" href="@postURL">Devamını Oku <span>&rarr;</span> </a>
+
+                                    </div>
+                                    <!--End post details-->
+
+                                </div>
+                            </div>
+
+                        }
+                    }
+                    else
+                    {
+                        <p></p>
+                    }}
+            </div>
+
+            <!--End row-->
+        </div>
+        <!--End container-->
+    </div>
+    <!--End block content-->
+
+</section>
+<!--End blog section-->
 
 @Html.Partial("_hook_pagingControlBefore")
 @Html.Partial("~/Views/Shared/_pagingControl.cshtml", Model)
 @Html.Partial("_hook_pagingControlAfter")
 
 @section Scripts {
-@if(disqusSettings.CurrentValue.IsEnabled) {
-<script id="dsq-count-scr" src="//@(disqusSettings.CurrentValue.ShortName).disqus.com/count.js" async></script>
-}}
+    @if (disqusSettings.CurrentValue.IsEnabled)
+    {
+        <script id="dsq-count-scr" src="//@(disqusSettings.CurrentValue.ShortName).disqus.com/count.js" async></script>
+    }}

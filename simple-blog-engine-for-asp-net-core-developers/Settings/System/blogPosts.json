@@ -6,7 +6,7 @@
       "published": true,
       "title": "Harweast Developer Union",
       "description": "Harweast Developer Union",
-      "image": "/img/harweastGuy.png",
+      "image": "~/img/harweastGuy.png",
       "createdate": {
         "year": "2017",
         "month": "03",
@@ -22,7 +22,7 @@
       "published": true,
       "title": "Xamarin Forms Swipe Gesture",
       "description": "Xamarin Forms Swipe Gesture",
-      "image": "/img/xamarinSwipe.jpg",
+      "image": "~/img/xamarinSwipe.jpg",
       "createdate": {
         "year": "2017",
         "month": "04",
@@ -38,7 +38,7 @@
       "published": true,
       "title": "Nissan Qashqai 1.2 DIG-T Xtronic Skypack Yorumlarım",
       "description": "Nissan Qashqai 1.2 DIG-T Xtronic Skypack Yorumlarım.",
-      "image": "/img/nissanqq.jpg",
+      "image": "~/img/nissanqq.jpg",
       "createdate": {
         "year": "2017",
         "month": "08",
@@ -54,7 +54,7 @@
       "published": true,
       "title": "Bilgisayarlarda Bilinen İlk Bug",
       "description": "Bilgisayarlarda Bilinen İlk Bug",
-      "image": "/img/hugeBug.jpeg",
+      "image": "~/img/hugeBug.jpeg",
       "createdate": {
         "year": "2017",
         "month": "08",
@@ -65,6 +65,38 @@
       "slug": "bilgisayarlarda-bilinen-ilk-bug",
       "view": "bilgisayarlarda-bilinen-ilk-bug.cshtml",
       "tags": [ "bilgisayar", "bug", "computer", "güve", "grace hopper", "moth" ]
+    },
+    {
+      "published": true,
+      "title": "MOSX Araç Durum Kontrol Cihazı",
+      "description": "MOSX Araç Durum Kontrol Cihazı",
+      "image": "~/img/mosx.png",
+      "createdate": {
+        "year": "2017",
+        "month": "02",
+        "day": "07",
+        "display": " 7 Şub 2017"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "mosx-arac-durum-kontrol-cihazi",
+      "view": "mosx-arac-durum-kontrol-cihazi.cshtml",
+      "tags": [ "araç arıza", "araç durum", "corsa d", "Girişim", "mobilotoservis", "mosx", "mosx yorum", "mosx kullananlar", "OBDII", "opel" ]
+    },
+    {
+      "published": true,
+      "title": "Xamarin Forms ile Image Zoom",
+      "description": "Xamarin Forms ile Image Zoom",
+      "image": "~/img/zoom.png",
+      "createdate": {
+        "year": "2017",
+        "month": "02",
+        "day": "03",
+        "display": " 3 Şub 2017"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "xamarin-forms-ile-image-zoom",
+      "view": "xamarin-forms-ile-image-zoom.cshtml",
+      "tags": [ "gestures", "pinch", "Xamarin", "xamarin forms", "zoom", "zoom image" ]
     }
   ]
 }

@@ -46,6 +46,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     text-decoration: none;
 }
 
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -107,7 +108,7 @@ iframe {
 body {
     background: #ffffff;
     font: 14px/22px "Open Sans",Arial,sans-serif;
-    color: #777777;
+    color: #1f1e1e;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
 }

@@ -3,22 +3,32 @@
 
 @{if (Model.BlogPostsConfig.Meta.TotalPages > 1)
     {
-        <ul class="pagination justify-content-center mb-4">
-            @for (int pageNumber = 1, pageCount = Model.BlogPostsConfig.Meta.TotalPages; pageNumber <= pageCount; pageNumber++)
-            {
+        <div class="block-pagination t-center  bg-grey ">
 
-                @if (pageNumber == Model.CurrentPageNumber)
+            <ul>
+                @for (int pageNumber = 1, pageCount = Model.BlogPostsConfig.Meta.TotalPages; pageNumber <= pageCount; pageNumber++)
                 {
-                    <li class="page-item active">
-                        <span class="page-link">@pageNumber</span>
-                    </li>
+                    @if (pageNumber == 1 && Model.CurrentPageNumber > 1)
+                    {
+                        var prev = Model.CurrentPageNumber - 1;
+                        <li class="prev"><a href="~/page/@prev"><i class="icon-left-open-mini"></i></a></li>
+                    }
+
+                    @if (pageNumber == Model.CurrentPageNumber)
+                    {
+                        <li><a href="#" class="selected">@pageNumber</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="~/page/@pageNumber">@pageNumber</a></li>
+                    }
+                    @if (pageNumber == pageCount && Model.CurrentPageNumber < pageCount)
+                    {
+                        var next = Model.CurrentPageNumber + 1;
+                        <li class="next"><a href="~/page/@next"><i class="icon-right-open-mini"></i></a></li>
+                    }
                 }
-                else
-                {
-                    <li class="page-item">
-                        <a class="page-link" href="~/page/@pageNumber">@pageNumber</a>
-                    </li>
-                }
-            }
-        </ul>
+            </ul>
+        </div>
+
     }}
