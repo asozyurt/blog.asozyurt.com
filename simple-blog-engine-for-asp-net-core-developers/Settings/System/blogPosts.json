@@ -4,8 +4,8 @@
   "blogs": [
     {
       "published": true,
-      "title": "Harweast Developer Union",
-      "description": "Harweast Developer Union",
+      "title": "HARWEAST DEVELOPER UNION",
+      "description": "Mesut ve İbrahim ile birlikte yaptığımız çalışmalarımız için bir grup oluşturduk, avatarımızı ve adımızı seçtik. Daha doğrusu onlar bizi seçti, çünkü mail adreslerinin tümü parsel parsel alındığı için onlarca değişik seçenekten geçip harweast ta karar kıldık.",
       "image": "~/img/harweastGuy.png",
       "createdate": {
         "year": "2017",
@@ -16,12 +16,13 @@
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "harweast-developer-union",
       "view": "harweast-developer-union.cshtml",
-      "tags": [ "developers", "harweast", "team" ]
+      "tags": [ "developers", "harweast", "team" ],
+      "categories": [ "Blog", "Girişim" ]
     },
     {
       "published": true,
-      "title": "Xamarin Forms Swipe Gesture",
-      "description": "Xamarin Forms Swipe Gesture",
+      "title": "XAMARIN FORMS SWIPE GESTURE",
+      "description": "Xamarin Formstaki temel sorunlardan birisi de Gesture (Kullanıcı Etkileşimleri) ların yetersiz olması. Pan (Kaydırma), Pinch (Çift Parmak) ve Tap (Tıklama) hareketleri için bir yapı var evet ama çoğu uygulamada kullandığımız Swipe (Kaydırma) için bir yapı yok.",
       "image": "~/img/xamarinSwipe.jpg",
       "createdate": {
         "year": "2017",
@@ -32,12 +33,13 @@
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "xamarin-forms-swipe-gesture",
       "view": "xamarin-forms-swipe-gesture.cshtml",
-      "tags": [ "swipe", "swipe gesture", "Xamarin", "xamarin behaviors", "xamarin forms" ]
+      "tags": [ "swipe", "swipe gesture", "Xamarin", "xamarin behaviors", "gestures" ],
+      "categories": [ "Xamarin", "Mobile Development", "Teknoloji" ]
     },
     {
       "published": true,
-      "title": "Nissan Qashqai 1.2 DIG-T Xtronic Skypack Yorumlarım",
-      "description": "Nissan Qashqai 1.2 DIG-T Xtronic Skypack Yorumlarım.",
+      "title": "NISSAN QASHQAI 1.2 DIG-T XTRONIC SKYPACK YORUMLARIM",
+      "description": "Arabayı 1 Haziranda aldım, 2.5 aydır aktif olarak kullandım ve artık izlenimlerimi yazmanın vakti geldi. İstanbul-İzmir gidiş gelişleri ve tatil de eklenince km 5bini buldu.",
       "image": "~/img/nissanqq.jpg",
       "createdate": {
         "year": "2017",
@@ -48,12 +50,13 @@
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "nissan-qashqai-yorumlarim",
       "view": "nissan-qashqai-yorumlarim.cshtml",
-      "tags": [ "araba inceleme", "car", "car review", "ilk izlenimler", "nissan", "qashqai", "skypack", "xtronic", "yakıt tüketimi" ]
+      "tags": [ "araba inceleme", "car", "car review", "ilk izlenimler", "nissan", "qashqai", "skypack", "xtronic", "yakıt tüketimi" ],
+      "categories": [ "Blog", "Arabalar", "İncelemeler" ]
     },
     {
       "published": true,
-      "title": "Bilgisayarlarda Bilinen İlk Bug",
-      "description": "Bilgisayarlarda Bilinen İlk Bug",
+      "title": "BİLGİSAYARLARDA BİLİNEN İLK BUG",
+      "description": "Bugün öğrendim ki, bilgisayarlarda bulunan ilk bug ( ing: böcek ) gerçek bir böcekmiş. Her ne kadar o tarihe kadar bilgisayarlardaki bug terimi daha önceden kullanılmış olsa da Grace Hopper ın günlüğüne yazıldıktan sonra iyice popüler hale gelmiş.",
       "image": "~/img/hugeBug.jpeg",
       "createdate": {
         "year": "2017",
@@ -64,12 +67,13 @@
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "bilgisayarlarda-bilinen-ilk-bug",
       "view": "bilgisayarlarda-bilinen-ilk-bug.cshtml",
-      "tags": [ "bilgisayar", "bug", "computer", "güve", "grace hopper", "moth" ]
+      "tags": [ "bilgisayar", "bug", "computer", "güve", "grace hopper", "moth" ],
+      "categories": [ "Blog", "Teknoloji" ]
     },
     {
       "published": true,
-      "title": "MOSX Araç Durum Kontrol Cihazı",
-      "description": "MOSX Araç Durum Kontrol Cihazı",
+      "title": "MOSX ARAÇ DURUM KONTROL CİHAZI",
+      "description": "Ekim 2016 da siparişini verdiğim cihaz dün elime ulaştı. Aslında cihaz gelmese benim siparişi verdiğimden haberim bile yoktu, unutmuşum aradan geçen süre içerisinde.",
       "image": "~/img/mosx.png",
       "createdate": {
         "year": "2017",
@@ -80,12 +84,13 @@
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "mosx-arac-durum-kontrol-cihazi",
       "view": "mosx-arac-durum-kontrol-cihazi.cshtml",
-      "tags": [ "araç arıza", "araç durum", "corsa d", "Girişim", "mobilotoservis", "mosx", "mosx yorum", "mosx kullananlar", "OBDII", "opel" ]
+      "tags": [ "araç arıza", "araç durum", "corsa d", "Girişim", "mobilotoservis", "mosx", "mosx yorum", "mosx kullananlar", "OBDII", "opel" ],
+      "categories": [ "Blog", "Teknoloji", "Girişim" ]
     },
     {
       "published": true,
-      "title": "Xamarin Forms ile Image Zoom",
-      "description": "Xamarin Forms ile Image Zoom",
+      "title": "XAMARIN FORMS İLE IMAGE ZOOM",
+      "description": "Merhaba, Universalist Dergi Mobil çalışmasının en mühim kısmı dergi sayfalarının okuma işlemi. Projenin genel yapısını proje sayfasında detaylı olarak görebilirsiniz. Bu yazımda sadece Image componentine ZoomIn/Zoom Out özelliğini nasıl kazandırabileceğimizden bahsedeceğim.",
       "image": "~/img/zoom.png",
       "createdate": {
         "year": "2017",
@@ -96,7 +101,42 @@
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "xamarin-forms-ile-image-zoom",
       "view": "xamarin-forms-ile-image-zoom.cshtml",
-      "tags": [ "gestures", "pinch", "Xamarin", "xamarin forms", "zoom", "zoom image" ]
+      "tags": [ "gestures", "pinch", "Xamarin", "xamarin forms", "zoom", "zoom image" ],
+      "categories": [ "Xamarin", "Mobile Development", "Teknoloji" ]
+    },
+    {
+      "published": true,
+      "title": "GİRİŞİME HAYAT VERMEK - TÜRKİYE'DE ŞİRKET KURMAK",
+      "description": "İlk cümleden belirteyim ki yazı bana ait değil, LinkedIn de tesadüfen denk geldiğim bir yazı. Her zaman elimin altında bulunmasını istediğim için buraya aynen kopyalayacağım. Umarım (ve eminim) faydası  olur. Keyifli okumalar.",
+      "image": "~/img/girisim.jpg",
+      "createdate": {
+        "year": "2017",
+        "month": "01",
+        "day": "26",
+        "display": " 26 Oca 2017"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "girisime-hayat-vermek-turkiyede-sirket-kurmak",
+      "view": "girisime-hayat-vermek-turkiyede-sirket-kurmak.cshtml",
+      "tags": [ "girişim", "startup", "Uğur Yedikardeş", "şirket kurma" ],
+      "categories": [ "Blog", "Alıntı", "Girişim", "Teknoloji" ]
+    },
+    {
+      "published": true,
+      "title": "BİR PROJEYE BAĞLANMAK",
+      "description": "Bir projede görev almak, daha da güzeli bir projenin başından itibaren çalışabilmek, hatta en güzeli bir proje bitirmiş olmak. İnsanı daha iyisini, daha büyüğünü yapmaya motive etmek için o kadar yeterli bir sebep ki.",
+      "image": "~/img/loveProject.jpg",
+      "createdate": {
+        "year": "2017",
+        "month": "01",
+        "day": "25",
+        "display": " 25 Oca 2017"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "bir-projeye-baglanmak",
+      "view": "bir-projeye-baglanmak.cshtml",
+      "tags": [ "adopting a project", "developers dream", "proje", "project", "dream project" ],
+      "categories": [ "Blog"]
     }
   ]
 }

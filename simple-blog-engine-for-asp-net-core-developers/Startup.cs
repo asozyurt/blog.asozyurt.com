@@ -120,6 +120,10 @@ namespace SimpleBlogEngine
                          name: "category",
                          template: "category/{category}",
                          defaults: new { controller = "Category", action = "Index" });
+                routes.MapRoute(
+                        name: "tag",
+                        template: "tag/{tag}",
+                        defaults: new { controller = "Tag", action = "Index" });
 
                 routes.MapRoute(
                          name: "default",

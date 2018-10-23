@@ -210,12 +210,16 @@ p.short-email {
 
 .switched-header {
     position: fixed;
-    background: #ffffff;
+    background: #f7f7f7;
     left: 0;
     top: 0;
     border-bottom: 1px solid #eaeaea;
 }
 
+.blog-list-image {
+    max-height: 250px;
+    max-width: 500px;
+}
 
 .main-nav {
     width: 100%;

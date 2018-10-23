@@ -5,10 +5,10 @@ using SimpleBlogEngine.Models;
 
 namespace SimpleBlogEngine.Controllers
 {
-    public class CategoryController : BaseController
+    public class TagController : BaseController
     {
         private BlogPostsSettings _blogPostsConfig;
-        public CategoryController(
+        public TagController(
             IHostingEnvironment hostingEnvironment,
             IOptionsMonitor<BlogPostsSettings> blogPostsConfig) : base(hostingEnvironment)
         {
@@ -19,7 +19,7 @@ namespace SimpleBlogEngine.Controllers
         {
             var model = new BlogPostsViewModel(_blogPostsConfig)
             {
-                PageOfBlogPosts = _blogPostsConfig.GetBlogPostsWithCategory(category),
+                PageOfBlogPosts = _blogPostsConfig.GetBlogPostsWithTag(category),
                 Category = category
             };
             return View(model);

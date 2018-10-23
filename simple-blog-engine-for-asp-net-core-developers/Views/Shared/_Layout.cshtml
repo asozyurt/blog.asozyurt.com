@@ -53,7 +53,7 @@
                 <div class="block-sidebar bg-grey clearfix">
                     @Html.Partial("_hook_sideBarTop")
                     @Html.Partial("_recentPosts", blogPostConfigMonitor.CurrentValue)
-                    @Html.Partial("_allTagsList", blogPostConfigMonitor.CurrentValue.Meta.Tags)
+                    @Html.Partial("_allCategoriesList", blogPostConfigMonitor.CurrentValue.Meta.Categories)
                     @Html.Partial("_hook_sideBarBottom")
                 </div>
             </div>

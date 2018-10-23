@@ -1,21 +1,50 @@
 ﻿@model BlogPostsViewModel
 @inject Microsoft.Extensions.Options.IOptionsMonitor<SiteSettings> siteSettings
 @{
-    ViewData["Title"] = Model.Category + "Kategorisindeki Yazılar - Sayfa " + Model.CurrentPageNumber;
-    ViewData["Description"] = Model.Category + "Kategorisindeki Yazılar - Sayfa " + Model.CurrentPageNumber;
+    ViewData["Title"] = Model.Category.ToUpperInvariant() + " Kategorisindeki Yazılar - Sayfa " + Model.CurrentPageNumber;
+    ViewData["Description"] = Model.Category.ToUpperInvariant() + " Kategorisindeki Yazılar - Sayfa " + Model.CurrentPageNumber;
 
     ViewBag.DontShowComments = true;
     ViewBag.DontShowAddThis = true;
     ViewBag.PageId = "category";
 }
 
+<h4 class="my-4 h4 text-center pt-10">
+    @Model.Category.ToUpperInvariant() KATEGORİSİNDEKİ YAZILAR
+</h4>
+
+<hr />
 @{if (Model.PageOfBlogPosts != null && Model.PageOfBlogPosts.Count > 0)
     {
         foreach (var blogPost in Model.PageOfBlogPosts)
         {
-            <div style="margin-bottom:40px;">
-                @Html.Partial("~/Views/Blog/ViewBlogPost.cshtml", blogPost)
-                <hr />
+            var postURL = "//" + Context.Request.Host + Url.Action("ViewBlogPost", "Blog", new { year = blogPost.CreateDate.Year, Month = blogPost.CreateDate.Month.ToString("00"), Slug = blogPost.Slug });
+            var imageURL = "//" + Context.Request.Host + blogPost.Image.Replace("~", string.Empty);
+            <div class="row">
+                <div class="post mb-30 mt-15 mr-1 ml-1 full-width">
+                    <!--Post media-->
+                    <!--End post media-->
+                    <!--Post details-->
+                    <div class="post-details bg-white pb-20">
+                        <h4 class="uppercase pt-15 pb-15 bold"><a href="@postURL">@blogPost.Title</a></h4>
+                        <!--Post meta-->
+                        <div class="post-meta t-center pt-10 pb-10">
+                            <ul class="clearfix">
+                                <li class="date"> @blogPost.CreateDate.Display</li>
+                                <li><i class="icon-user-1"></i><span><a href="#"> @blogPost.Author</a></span></li>
+                                <li><i class="icon-layout"></i><span><a href="#"> @blogPost.CategoryList</a></span></li>
+                            </ul>
+                        </div>
+                        <!--End post meta-->
+
+                        <p class="pt-15 pb-20">@blogPost.Description</p>
+
+                        <a class="more" href="@postURL">Devamını Oku <span>&rarr;</span> </a>
+
+                    </div>
+                    <!--End post details-->
+
+                </div>
             </div>
         }
     }

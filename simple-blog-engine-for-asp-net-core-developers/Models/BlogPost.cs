@@ -10,10 +10,19 @@ namespace SimpleBlogEngine.Models
         public BlogPostDate CreateDate { get; set; }
         public BlogPostDate LastUpdate { get; set; }
         public List<string> Tags { get; set; }
+        public List<string> Categories { get; set; }
         public string Author { get; set; }
         public string Slug { get; set; }
         public string View { get; set; }
         public string Image { get; set; }
+        public string CategoryList
+        {
+            get
+            {
+                if (Categories == null || Categories.Count == 0) return "None";
+                return string.Join(",", Categories);
+            }
+        }
     }
 
     public class BlogPostDate

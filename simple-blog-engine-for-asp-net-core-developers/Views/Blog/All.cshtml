@@ -10,18 +10,31 @@
     if (blogPost.Published)
     {
         var postURL = "//" + Context.Request.Host + Url.Action("ViewBlogPost", "Blog", new { year = blogPost.CreateDate.Year, Month = blogPost.CreateDate.Month.ToString("00"), Slug = blogPost.Slug });
-        <div class="blog-post-list-item">
-            <img class="img-circle img-thumbnail" src="@blogPost.Image" />
-            <h4><a href="@postURL">@blogPost.Title</a></h4>
-            <p style="margin-bottom:0;">@blogPost.Description</p>
-            <div><a href="@postURL">Devamını Oku...</a></div>
-        </div>
-
+        var imageURL = "//" + Context.Request.Host + blogPost.Image.Replace("~", string.Empty);
         <div class="row">
-            <div class="col-md-12">
-                <div class="block-title mb-60">
-                    <h2 class="title">The Blog</h2>
+            <div class="post mb-30 mt-15 mr-1 ml-1 full-width">
+                <!--Post media-->
+                <!--End post media-->
+                <!--Post details-->
+                <div class="post-details bg-white pb-20">
+                    <h4 class="uppercase pt-15 pb-15 bold"><a href="@postURL">@blogPost.Title</a></h4>
+                    <!--Post meta-->
+                    <div class="post-meta t-center pt-10 pb-10">
+                        <ul class="clearfix">
+                            <li class="date"> @blogPost.CreateDate.Display</li>
+                            <li><i class="icon-user-1"></i><span><a href="#"> @blogPost.Author</a></span></li>
+                            <li><i class="icon-layout"></i><span><a href="#"> @blogPost.CategoryList</a></span></li>
+                        </ul>
+                    </div>
+                    <!--End post meta-->
+
+                    <p class="pt-15 pb-20">@blogPost.Description</p>
+
+                    <a class="more" href="@postURL">Devamını Oku <span>&rarr;</span> </a>
+
                 </div>
+                <!--End post details-->
+
             </div>
         </div>
     }

@@ -41,7 +41,7 @@
         {
             var tag = Model.Tags[0];
             <i class="fa fa-tag" aria-hidden="true"></i>
-            <a href="/category/@tag">@tag</a>
+            <a href="/tag/@tag">@tag</a>
         }
         else if (tagCount > 1)
         {
@@ -49,7 +49,7 @@
             for (int i = 0; i < tagCount; i++)
             {
                 var tag = Model.Tags[i];
-                <a href="/category/@tag.MakeURLFriendly()">@tag</a>if (i < tagCount - 1)
+                <a href="/tag/@tag.MakeURLFriendly()">@tag</a>if (i < tagCount - 1)
                 {<text>, </text>}
         }
     }

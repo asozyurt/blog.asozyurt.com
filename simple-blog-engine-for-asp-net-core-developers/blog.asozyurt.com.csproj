@@ -49,6 +49,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Shared\_allCategoriesList.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\_blogSource\bir-projeye-baglanmak.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\_blogSource\harweast-developer-union.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
@@ -56,6 +62,9 @@
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Views\_blogSource\xamarin-forms-ile-image-zoom.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\_blogSource\girisime-hayat-vermek-turkiyede-sirket-kurmak.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>

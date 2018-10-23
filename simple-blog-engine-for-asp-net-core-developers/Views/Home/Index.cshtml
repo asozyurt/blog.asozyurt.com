@@ -32,16 +32,16 @@
                                     <div class="post-details bg-white pb-20">
                                         <h4 class="uppercase pt-15 pb-15 bold"><a href="@postURL">@blogPost.Title</a></h4>
                                         <!--Post meta-->
-                                        <div class="post-media">
+                                        <div class="post-media text-center">
                                             <ul>
-                                                <li><a href="@postURL"><img class="pl-3 pr-3 full-width" src="@imageURL" alt="" /></a></li>
+                                                <li><a href="@postURL"><img class="pl-3 pr-3 full-width blog-list-image" src="@imageURL" alt="" /></a></li>
                                             </ul>
                                         </div>
                                         <div class="post-meta t-center pt-10 pb-10">
                                             <ul class="clearfix">
                                                 <li class="date"> @blogPost.CreateDate.Display</li>
                                                 <li><i class="icon-user-1"></i><span><a href="#"> @blogPost.Author</a></span></li>
-                                                <li><i class="icon-layout"></i><span>Kategori<a href="#"> Web Design</a></span></li>
+                                                <li><i class="icon-layout"></i><span><a href="#"> @blogPost.CategoryList</a></span></li>
                                             </ul>
                                         </div>
                                         <!--End post meta-->
