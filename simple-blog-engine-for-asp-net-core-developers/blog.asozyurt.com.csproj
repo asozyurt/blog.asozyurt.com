@@ -55,6 +55,9 @@
     <Content Update="Views\Shared\_allCategoriesList.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Views\_blogSource\olun-bizi-ayirana-dek.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\_blogSource\bir-projeye-baglanmak.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

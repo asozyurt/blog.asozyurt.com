@@ -4,6 +4,23 @@
   "blogs": [
     {
       "published": true,
+      "title": "ÖLÜ'N BİZİ AYIRANA DEK",
+      "description": "Oyuna 26 Temmuz Perşembe günü Kültürpark açık hava tiyatrosunda gittim. Oyundan, oyunculardan ve senaryodan da bahsetmek istiyorum ancak bir kaç yan hususu da irdelemeden geçemeyeceğim.",
+      "image": "~/img/olunBiziAyiranaDek.jpg",
+      "createdate": {
+        "year": "2018",
+        "month": "10",
+        "day": "24",
+        "display": " 24 Eki 2018"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "olun-bizi-ayirana-dek",
+      "view": "olun-bizi-ayirana-dek.cshtml",
+      "tags": [ "Ölün Bizi Ayırana Dek", "Tiyatro", "Hakan Yılmaz", "Ebru Cündübeyoğlu" ],
+      "categories": [ "Tiyatro" ]
+    },
+    {
+      "published": true,
       "title": "HARWEAST DEVELOPER UNION",
       "description": "Mesut ve İbrahim ile birlikte yaptığımız çalışmalarımız için bir grup oluşturduk, avatarımızı ve adımızı seçtik. Daha doğrusu onlar bizi seçti, çünkü mail adreslerinin tümü parsel parsel alındığı için onlarca değişik seçenekten geçip harweast ta karar kıldık.",
       "image": "~/img/harweastGuy.png",
@@ -136,7 +153,7 @@
       "slug": "bir-projeye-baglanmak",
       "view": "bir-projeye-baglanmak.cshtml",
       "tags": [ "adopting a project", "developers dream", "proje", "project", "dream project" ],
-      "categories": [ "Blog"]
+      "categories": [ "Blog" ]
     }
   ]
 }
