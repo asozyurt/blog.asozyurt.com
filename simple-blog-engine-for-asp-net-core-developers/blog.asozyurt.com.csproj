@@ -49,6 +49,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Tag\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Shared\_allCategoriesList.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

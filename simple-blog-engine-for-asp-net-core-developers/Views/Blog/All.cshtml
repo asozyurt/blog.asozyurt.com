@@ -1,4 +1,5 @@
 ﻿@inject Microsoft.Extensions.Options.IOptionsMonitor<BlogPostsSettings> blogPostConfigMonitor
+@using SimpleBlogEngine.Extensions
 @{
     ViewData["Title"] = "Tüm Yazılar";
 }
@@ -23,7 +24,28 @@
                         <ul class="clearfix">
                             <li class="date"> @blogPost.CreateDate.Display</li>
                             <li><i class="icon-user-1"></i><span><a href="#"> @blogPost.Author</a></span></li>
-                            <li><i class="icon-layout"></i><span><a href="#"> @blogPost.CategoryList</a></span></li>
+                            <li>
+                                <i class="icon-layout"></i><span>
+                                    @{
+                                        var categoryCount = blogPost.Categories != null ? blogPost.Categories.Count : 0;
+                                        if (categoryCount == 1)
+                                        {
+                                            var category = blogPost.Categories[0];
+                                            <a href="~/category/@category">@category</a>
+                                        }
+                                        else if (categoryCount > 1)
+                                        {
+                                            for (int i = 0; i < categoryCount; i++)
+                                            {
+                                                var category = blogPost.Categories[i];
+                                                <a href="~/category/@category.MakeURLFriendly()">@category</a>
+                                                if (i < categoryCount - 1)
+                                                {<text>, </text>}
+                                        }
+                                    }
+                                    }
+                                </span>
+                            </li>
                         </ul>
                     </div>
                     <!--End post meta-->

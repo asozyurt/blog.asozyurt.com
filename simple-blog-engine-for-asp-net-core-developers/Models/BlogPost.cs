@@ -15,14 +15,6 @@ namespace SimpleBlogEngine.Models
         public string Slug { get; set; }
         public string View { get; set; }
         public string Image { get; set; }
-        public string CategoryList
-        {
-            get
-            {
-                if (Categories == null || Categories.Count == 0) return "None";
-                return string.Join(",", Categories);
-            }
-        }
     }
 
     public class BlogPostDate

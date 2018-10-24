@@ -130,6 +130,10 @@ small {
     font-size: 80%;
 }
 
+.blogpost-tags {
+    font-size: 13px !important;
+    margin-bottom: 10px;
+}
 
 .uppercase {
     text-transform: uppercase;

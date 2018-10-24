@@ -15,12 +15,12 @@ namespace SimpleBlogEngine.Controllers
             _blogPostsConfig = blogPostsConfig.CurrentValue;
         }
 
-        public IActionResult Index(string category)
+        public IActionResult Index(string tag)
         {
             var model = new BlogPostsViewModel(_blogPostsConfig)
             {
-                PageOfBlogPosts = _blogPostsConfig.GetBlogPostsWithTag(category),
-                Category = category
+                PageOfBlogPosts = _blogPostsConfig.GetBlogPostsWithTag(tag),
+                Tag = tag
             };
             return View(model);
         }

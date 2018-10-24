@@ -2,16 +2,16 @@
 @inject Microsoft.Extensions.Options.IOptionsMonitor<SiteSettings> siteSettings
 @using SimpleBlogEngine.Extensions
 @{
-    ViewData["Title"] = Model.Category.ToUpperInvariant() + " Kategorisindeki Yazılar - Sayfa " + Model.CurrentPageNumber;
-    ViewData["Description"] = Model.Category.ToUpperInvariant() + " Kategorisindeki Yazılar - Sayfa " + Model.CurrentPageNumber;
+    ViewData["Title"] = Model.Tag.ToUpperInvariant() + " Etiketli Yazılar - Sayfa " + Model.CurrentPageNumber;
+    ViewData["Description"] = Model.Tag.ToUpperInvariant() + " Kategorisindeki Yazılar - Sayfa " + Model.CurrentPageNumber;
 
     ViewBag.DontShowComments = true;
     ViewBag.DontShowAddThis = true;
-    ViewBag.PageId = "category";
+    ViewBag.PageId = "tag";
 }
 
 <h4 class="my-4 h4 text-center pt-10">
-    @Model.Category.ToUpperInvariant() KATEGORİSİNDEKİ YAZILAR
+    @Model.Tag.ToUpperInvariant() ETİKETLİ YAZILAR
 </h4>
 
 <hr />
