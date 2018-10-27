@@ -1,5 +1,4 @@
 ﻿@model BlogPost
-
 <p class="text-justify">
     Xamarin Formstaki temel sorunlardan birisi de Gesture (Kullanıcı Etkileşimleri) ların yetersiz olması. Pan (Kaydırma), Pinch (Çift Parmak) ve Tap (Tıklama) hareketleri için bir yapı var evet ama çoğu uygulamada kullandığımız Swipe (Kaydırma) için bir yapı yok.
 </p>
@@ -22,54 +21,10 @@
 </ul>
 <br />
 <p class="text-justify">
-    Ben bu projede kullanmadım ama aynı mantıkla Y koordinatındaki değişimi de yakalayıp aşağı/yukarı kaydırma hareketleri de yakalanabilir.
+    Ben bu projede kullanmadım ama aynı mantıkla Y koordinatındaki değişimi de yakalayıp aşağı/yukarı kaydırma hareketleri de yakalanabilir. <span class="bold">OnPanUpdated</span> metodunu inceleyebilirsiniz.
 </p>
-<div class="block-quote">
-    <i class="icon-quote"></i>
-    <blockquote>
-        private void OnPanUpdated(object sender, PanUpdatedEventArgs e)<br />
-        {<br />
-        if (_parent == null || !IsTranslateEnabled)<br />
-        {return;}<br />
-        <br />
-        switch (e.StatusType)<br />
-        {<br />
-        case GestureStatus.Started:<br />
-        panStartX = _xOffset;<br />
-        panStartY = _yOffset;<br />
-        panStartTime = DateTime.Now.Ticks;<br />
-        break;<br />
-        case GestureStatus.Running:<br />
-        _parent.Content.TranslationX = _xOffset + e.TotalX;<br />
-        _parent.Content.TranslationY = _yOffset + e.TotalY;<br />
-        break;<br />
-        case GestureStatus.Completed:<br />
-        _xOffset = _parent.Content.TranslationX;<br />
-        _yOffset = _parent.Content.TranslationY;<br />
-        <br />
-        if (_currentScale == 1)<br />
-        {<br />
-        panEndTime = DateTime.Now.Ticks;<br />
-        if (panEndTime – panStartTime < 1500000)<br />
-        {<br />
-        double yDifference = panStartY – _yOffset;<br />
-        double xDifference = panStartX – _xOffset;<br />
-        <br />
-        if (yDifference > -100 && yDifference < 100
-        && (xDifference < -35 || xDifference > 35))<br />
-        {<br />
-        // If x is bigger than 0 sliding direction is right, otherwise left<br />
-        MessagingCenter.Send(this, xDifference > 0 ? Constants.RIGHT_SLIDE : Constants.LEFT_SLIDE);<br />
-        }<br />
-        panStartX = 0;<br />
-        panStartY = 0;<br />
-        }<br />
-        }<br />
-        break;<br />
-        }<br />
-        }
-    </blockquote>
-</div>
+<br />
+<script src="https://gist.github.com/asozyurt/6b637b5c3425791814746a57d7608bd5.js"></script>
 <br />
 <p class="text-justify">
     Projede yalnızca Image bileşeni için denedim, diğer bileşenlere de uygulanabileceğini düşünüyorum, çünkü zaten Image için olan örnekte de tüm event ler ContentView a tanımlanıyor. Yeni bir proje açıp bu örnekleri de eklemeyi düşünüyorum. Tamamladığımda buradan paylaşırım.

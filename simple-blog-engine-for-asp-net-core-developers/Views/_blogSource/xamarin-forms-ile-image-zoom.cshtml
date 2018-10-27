@@ -1,57 +1,67 @@
 ﻿@model BlogPost
+<p class="text-center"><img class="img-fluid" title="Zoom Image" src="~/img/zoom.png" /></p>
 
-<p>
+<p class="text-justify">
     Merhaba,
-
+</p>
+<br />
+<p class="text-justify">
     Universalist Dergi Mobil çalışmasını Xamarin ile yaptığımı yazdım. O projenin (ilk versiyonunun) en mühim kısmı dergi sayfalarının okuma işlemi. Projenin genel yapısını proje sayfasında detaylı olarak görebilirsiniz. Bu yazımda sadece Image componentine ZoomIn/Zoom Out özelliğini nasıl kazandırabileceğimizden bahsedeceğim.
-
+</p>
+<br />
+<p class="text-justify">
     Aslında bu özelliğin bir property olarak verilmemesi büyük hata, tahminimce yeni gelecek güncellemelerle bir property ile bu özellik de eklenecektir. O gelene kadar aşağıdaki çözümü kullanabiliriz.
-
-    Aslında mantık basit, Keep It Simple prensibine uygun. Kodun yaptığı şey şu;
-
-    Kullanıcının büyütme-küçültme (Pinch) hareketini -meşhur parmak hareketi- yakalayıp Content içindeki elemanı o oranda yakınlaştır,
-    Kullanıcının sürükleme (Pan) hareketini yakalayıp Content içinde gösterilen kısmın ekrandaki yerini belirle,
-    Çift tıklama (Tap) hareketini yakalayıp Content içindeki değer daha önce büyütülmüşse orjinal boyuta döndür, orjinal boyuttaysa bir miktar yakınlaş.
-    Xamarin forumlarından aldığım örnekler üzerine ;
-
-    Çift tıklama ile fotoğrafın orijinal boyutuna dönmesi özelliğini ekledim,
-    Parçalı sınıflara bağımlılığını kopardım,
-    Şekil şemailini düzelttim.
-    Kullanmak için;
-
-    ZoomImageBehavior.cs sınıfını projenizde istediğiniz bir yere kopyalayın.
-    Özelliği ekleyeceğiniz sayfanın Xaml koduna aşağıdaki şekilde image componentini ekleyin.
-    Ekranın bir xaml ı yoksa behavior u koddan da verebilirsiniz. O da şu şekilde:
-    imgActivePage.Behaviors.Add(new ZoomImageBehavior{ IsScaleEnabled = true, IsTranslateEnabled=true })
-    !!! Dikkat !!!
+</p>
+<br />
+<p class="text-justify">
+    Aslında mantık basit, <span class="italic bold">Keep It Simple</span> prensibine uygun. Kodun yaptığı şey şu;
+</p>
+<br />
+<ul>
+    <li>* Kullanıcının büyütme-küçültme (Pinch) hareketini -meşhur parmak hareketi- yakalayıp Content içindeki elemanı o oranda yakınlaştır,</li>
+    <li>* Kullanıcının sürükleme (Pan) hareketini yakalayıp Content içinde gösterilen kısmın ekrandaki yerini belirle,</li>
+    <li>* Çift tıklama (Tap) hareketini yakalayıp Content içindeki değer daha önce büyütülmüşse orjinal boyuta döndür, orjinal boyuttaysa bir miktar yakınlaş.</li>
+</ul>
+<br />
+<p class="text-justify">
+    <span class="bold">Xamarin forumlarından aldığım örnekler üzerine;</span>
+    <ul>
+        <li>* Çift tıklama ile fotoğrafın orijinal boyutuna dönmesi özelliğini ekledim,</li>
+        <li>* Parçalı sınıflara bağımlılığını kopardım,</li>
+        <li>* Şekil şemailini düzelttim.</li>
+    </ul>
+    <br />
+    <span class="bold">Kullanmak için;</span>
+    <br />
+    <ul>
+        <li>* ZoomImageBehavior.cs sınıfını projenizde istediğiniz bir yere kopyalayın,</li>
+        <li>* Özelliği ekleyeceğiniz sayfanın Xaml koduna aşağıdaki şekilde image componentini ekleyin,</li>
+    </ul>
+    <br />
+    Ekranın bir xaml ı yoksa behavior u koddan da verebilirsiniz. O da şu şekilde.
+    <br />
+    <span class="italic">imgActivePage.Behaviors.Add(new ZoomImageBehavior{ IsScaleEnabled=true, IsTranslateEnabled=true })</span>
+</p>
+<br />
+<p class="text-justify">
+    <span class="color-red"> !!! Dikkat !!!</span>
+    <br />
     Image component inin bir ContentView içinde olması gerekiyor. Behavior kodlarını incelediğinizde Parent nesnesi olarak bir ContentView aradığını göreceksiniz. Parent ı burda değiştirecekseniz behavior içinde de değiştirmeniz gerekir.
-
+</p>
+<p class="text-justify">
     Faydalı olması ümidiyle, herkese kolay gelsin.
 </p>
+<br />
+<h3 class="bold">Xaml Tarafı:</h3>
+<script src="https://gist.github.com/asozyurt/7d57dcb943644ac24a271af9a3de6231.js"></script>
+<br />
+<h3 class="bold">Kod Tarafı:</h3>
 
-<p>
-    Xaml Tarafı:
-    xmlns:bhv="clr-namespace:PathToZoomImageBehavior"
-    ...
-    <ContentView VerticalOptions="FillAndExpand"
-                 HorizontalOptions="FillAndExpand">
-        <Image x:Name="imgActivePage"
-               Aspect="Fill"
-               Source="{Binding ImageUrl}">
-            <Image.Behaviors>
-                <bhv:ZoomImageBehavior IsScaleEnabled="True"
-                                       IsTranslateEnabled="True" />
-            </Image.Behaviors>
-        </Image>
-    </ContentView>
-</p>
+<script src="https://gist.github.com/asozyurt/6b637b5c3425791814746a57d7608bd5.js"></script>
 
-<p>
-    CodeBehind (ZoomImageBehavior.cs)
-    github – ZoomImageBehavior.cs
-
+<p class="text-justify color-forestgreen">
     Referans :
-    https://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/
+    <a href="https://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/">https://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/</a>
 </p>
 
-<p><img class="img-fluid" title="title" src="~/img/zoom.png" /></p>	
+
