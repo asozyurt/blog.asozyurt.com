@@ -1,8 +1,10 @@
-# simple-blog-engine-for-asp-net-core
+# Simple Blog Engine With .Net Core (Static Theme) 
 
-I made a file-based, customisable and fast ASP.NET Core blog engine using razor views as the blog posts files. It looks like this out of the box :
+This is a file-based, easy to customize and fast Asp.Net Core blog engine. Over the original repository, I made some visual and additional changes on it.
 
-![Blog screenshot 1](http://www.garethelms.org/img/2017/11/blog-screenshot-1.jpg)
+Result is :
+
+![Blog screenshot 1](http://blog.asozyurt.com/img/blog_screenshot.jpg)
 
 You could knock this up yourself in an hour of course but the advantages of using this blog engine are the extra features you get for free :
 
