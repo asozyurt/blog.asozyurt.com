@@ -4,9 +4,26 @@
   "blogs": [
     {
       "published": true,
+      "title": ".NET CORE 3 ÇIKIYOR - YENİLİKLER NELER",
+      "description": "Teknoloji gelişiyor, teknoloji geliştirme araçları da gelişiyor ve bazen sadece haberlerini bile takip etmekte zorlanacağınız bir hıza ulaşıyor. '.Net Core' nispeten yeni bir teknoloji ve yeni yeni yaygınlaşıyor diyebiliriz.",
+      "image": "http://blog.asozyurt.com/img/dotnetCore.png",
+      "createdate": {
+        "year": "2018",
+        "month": "12",
+        "day": "15",
+        "display": " 15 Ara 2018"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "dotnet-core-3-cikiyor-yenilikler-neler",
+      "view": "dotnet-core-3-cikiyor-yenilikler-neler.md",
+      "tags": [ ".NetCore", "Dotnet", "Core", "Teknoloji" ],
+      "categories": [ "Teknoloji" ]
+    },
+    {
+      "published": true,
       "title": "ÖLÜ'N BİZİ AYIRANA DEK",
       "description": "Oyuna 26 Temmuz Perşembe günü Kültürpark açık hava tiyatrosunda gittim. Oyundan, oyunculardan ve senaryodan da bahsetmek istiyorum ancak bir kaç yan hususu da irdelemeden geçemeyeceğim.",
-      "image": "~/img/olunBiziAyiranaDek.jpg",
+      "image": "http://blog.asozyurt.com/img/olunBiziAyiranaDek.jpg",
       "createdate": {
         "year": "2018",
         "month": "10",
@@ -15,7 +32,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "olun-bizi-ayirana-dek",
-      "view": "olun-bizi-ayirana-dek.cshtml",
+      "view": "olun-bizi-ayirana-dek.md",
       "tags": [ "Ölün Bizi Ayırana Dek", "Tiyatro", "Hakan Yılmaz", "Ebru Cündübeyoğlu" ],
       "categories": [ "Tiyatro" ]
     },
@@ -23,7 +40,7 @@
       "published": true,
       "title": "HARWEAST DEVELOPER UNION",
       "description": "Mesut ve İbrahim ile birlikte yaptığımız çalışmalarımız için bir grup oluşturduk, avatarımızı ve adımızı seçtik. Daha doğrusu onlar bizi seçti, çünkü mail adreslerinin tümü parsel parsel alındığı için onlarca değişik seçenekten geçip harweast ta karar kıldık.",
-      "image": "~/img/harweastGuy.png",
+      "image": "http://blog.asozyurt.com/img/harweastGuy.png",
       "createdate": {
         "year": "2017",
         "month": "03",
@@ -57,7 +74,7 @@
       "published": true,
       "title": "NISSAN QASHQAI 1.2 DIG-T XTRONIC SKYPACK YORUMLARIM",
       "description": "Arabayı 1 Haziranda aldım, 2.5 aydır aktif olarak kullandım ve artık izlenimlerimi yazmanın vakti geldi. İstanbul-İzmir gidiş gelişleri ve tatil de eklenince km 5bini buldu.",
-      "image": "~/img/nissanqq.jpg",
+      "image": "http://blog.asozyurt.com/img/nissanqq.jpg",
       "createdate": {
         "year": "2017",
         "month": "08",
@@ -74,7 +91,7 @@
       "published": true,
       "title": "BİLGİSAYARLARDA BİLİNEN İLK BUG",
       "description": "Bugün öğrendim ki, bilgisayarlarda bulunan ilk bug ( ing: böcek ) gerçek bir böcekmiş. Her ne kadar o tarihe kadar bilgisayarlardaki bug terimi daha önceden kullanılmış olsa da Grace Hopper ın günlüğüne yazıldıktan sonra iyice popüler hale gelmiş.",
-      "image": "~/img/hugeBug.jpeg",
+      "image": "http://blog.asozyurt.com/img/hugeBug.jpeg",
       "createdate": {
         "year": "2017",
         "month": "08",
@@ -91,7 +108,7 @@
       "published": true,
       "title": "MOSX ARAÇ DURUM KONTROL CİHAZI",
       "description": "Ekim 2016 da siparişini verdiğim cihaz dün elime ulaştı. Aslında cihaz gelmese benim siparişi verdiğimden haberim bile yoktu, unutmuşum aradan geçen süre içerisinde.",
-      "image": "~/img/mosx.png",
+      "image": "http://blog.asozyurt.com/img/mosx.png",
       "createdate": {
         "year": "2017",
         "month": "02",
@@ -108,7 +125,7 @@
       "published": true,
       "title": "XAMARIN FORMS İLE IMAGE ZOOM",
       "description": "Merhaba, Universalist Dergi Mobil çalışmasının en mühim kısmı dergi sayfalarının okuma işlemi. Projenin genel yapısını proje sayfasında detaylı olarak görebilirsiniz. Bu yazımda sadece Image componentine ZoomIn/Zoom Out özelliğini nasıl kazandırabileceğimizden bahsedeceğim.",
-      "image": "~/img/zoom.png",
+      "image": "http://blog.asozyurt.com/img/zoom.png",
       "createdate": {
         "year": "2017",
         "month": "02",
@@ -125,7 +142,7 @@
       "published": true,
       "title": "GİRİŞİME HAYAT VERMEK - TÜRKİYE'DE ŞİRKET KURMAK",
       "description": "İlk cümleden belirteyim ki yazı bana ait değil, LinkedIn de tesadüfen denk geldiğim bir yazı. Her zaman elimin altında bulunmasını istediğim için buraya aynen kopyalayacağım. Umarım (ve eminim) faydası  olur. Keyifli okumalar.",
-      "image": "~/img/girisim.jpg",
+      "image": "http://blog.asozyurt.com/img/girisim.jpg",
       "createdate": {
         "year": "2017",
         "month": "01",
@@ -142,7 +159,7 @@
       "published": true,
       "title": "BİR PROJEYE BAĞLANMAK",
       "description": "Bir projede görev almak, daha da güzeli bir projenin başından itibaren çalışabilmek, hatta en güzeli bir proje bitirmiş olmak. İnsanı daha iyisini, daha büyüğünü yapmaya motive etmek için o kadar yeterli bir sebep ki.",
-      "image": "~/img/loveProject.jpg",
+      "image": "http://blog.asozyurt.com/img/loveProject.jpg",
       "createdate": {
         "year": "2017",
         "month": "01",

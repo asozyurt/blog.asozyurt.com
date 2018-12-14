@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System.Reflection;
 
 namespace SimpleBlogEngine
 {
@@ -25,7 +20,7 @@ namespace SimpleBlogEngine
 			  .AddJsonFile("Settings" + Path.DirectorySeparatorChar + "System" + Path.DirectorySeparatorChar + "hosting.json",optional: false)
 			  .Build();
 
-			return WebHost.CreateDefaultBuilder(args)
+            return WebHost.CreateDefaultBuilder(args)
 			  .ConfigureLogging((hostingContext, logging) =>
 			  {
 					logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));

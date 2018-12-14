@@ -1,5 +1,8 @@
 ﻿@model BlogPost
 @using SimpleBlogEngine.Extensions
+@using blog.asozyurt.com.Utility
+@using Markdig
+
 @inject Microsoft.Extensions.Options.IOptionsMonitor<DisqusSettings> disqusSettings
 @inject Microsoft.Extensions.Options.IOptionsMonitor<AddThisSettings> addThisSettings
 @{
@@ -30,7 +33,14 @@
 
 @Html.Partial("_hook_blogPostBeforeBlogContent", Model)
 
-@Html.Partial("~/Views/_blogSource/" + Model.View, Model)
+@if (!string.IsNullOrEmpty(Model.Image))
+{
+    <center>
+        <img class="img-fluid text-center" src="@Model.Image" />
+    </center>
+}
+
+@Html.Raw(Markdown.ToHtml(FileReader.GetBlogPostContent(Model)))
 
 @Html.Partial("_hook_blogPostAfterBlogContent", Model)
 
