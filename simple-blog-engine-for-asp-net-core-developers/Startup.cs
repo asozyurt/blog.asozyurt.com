@@ -60,7 +60,7 @@ namespace SimpleBlogEngine
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowMyOrigin",
-                builder => builder.WithOrigins("http://asozyurt", "http://localhost", "http://asozyurt.com", "asozyurt.com", "http://localhost/asozyurt", "localhost/asozyurt", "localhost"));
+                builder => builder.WithOrigins("http://asozyurt", "http://localhost", "http://asozyurt.com", "asozyurt.com", "http://localhost/asozyurt", "localhost/asozyurt", "localhost", "http://www.asozyurt.com", "www.asozyurt.com"));
             });
         }
 
@@ -107,7 +107,7 @@ namespace SimpleBlogEngine
             siteConfigMonitor.CurrentValue.Theme.HeaderImage = siteConfigMonitor.CurrentValue.Theme.HeaderImage.Replace("/{theme}", "").Replace("{theme}", "");
 
             app.UseCors(
-             options => options.WithOrigins("http://asozyurt.com", "asozyurt.com", "http://localhost/asozyurt", "localhost/asozyurt", "localhost", "http://localhost").AllowAnyMethod()
+             options => options.WithOrigins("http://asozyurt.com", "asozyurt.com", "http://localhost/asozyurt", "localhost/asozyurt", "localhost", "http://localhost", "http://www.asozyurt.com", "www.asozyurt.com").AllowAnyMethod()
              );
 
             app.UseMvc(routes =>
