@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SimpleBlogEngine.Models
 {
@@ -23,5 +24,6 @@ namespace SimpleBlogEngine.Models
         public int Month { get; set; }
         public int Day { get; set; }
         public string Display { get; set; }
+        public DateTime Date { get { return new DateTime(Year, Month, Day); } }
     }
 }

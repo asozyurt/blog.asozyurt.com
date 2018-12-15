@@ -28,6 +28,7 @@ namespace SimpleBlogEngine.Models
     public class BlogPostsSettings
     {
         public int BlogsPerPage { get; set; }
+        public int NumberOfRecentBlogPostsToServeInApi { get; set; }
         public int NumberOfRecentBlogPostsToShowInSidebar { get; set; }
         public BlogPostsSettings_MetaData Meta { get; set; }
         public List<BlogPost> Blogs { get; set; }
@@ -100,6 +101,7 @@ namespace SimpleBlogEngine.Models
             }
             return null;
         }
+
         public List<BlogPost> GetBlogPostsWithCategory(string category)
         {
             var trueCategory = Meta.Categories.SingleOrDefault(t => t.Category_URLFriendly == category.ToLower());

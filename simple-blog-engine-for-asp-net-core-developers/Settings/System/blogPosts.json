@@ -1,5 +1,6 @@
 ﻿{
   "blogsPerPage": 3,
+  "NumberOfRecentBlogPostsToServeInApi": 3,
   "NumberOfRecentBlogPostsToShowInSidebar": 5,
   "blogs": [
     {
