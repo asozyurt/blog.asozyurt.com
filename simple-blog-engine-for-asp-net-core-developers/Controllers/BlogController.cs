@@ -29,21 +29,7 @@ namespace SimpleBlogEngine.Controllers
 			}
 			return View(blogPost);
 		}
-
-		//public IActionResult About()
-		//{
-		//	ViewData["Message"] = "Your application description page.";
-
-		//	return View();
-		//}
-
-		//public IActionResult Contact()
-		//{
-		//	ViewData["Message"] = "Your contact page.";
-
-		//	return View();
-		//}
-
+        
 		public IActionResult All()
 		{
 			return View();
@@ -53,5 +39,12 @@ namespace SimpleBlogEngine.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
-	}
+
+        public List<BlogPost> GetRecentBlogPosts()
+        {
+            var blogPost = _blogPostsConfig.Blogs.Where(x => x.Published).OrderByDescending(x => x.CreateDate);
+            return blogPost.ToList();
+        }
+
+    }
 }
