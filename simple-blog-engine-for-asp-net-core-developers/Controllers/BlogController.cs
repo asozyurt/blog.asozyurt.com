@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using SimpleBlogEngine.Models;
@@ -8,6 +9,7 @@ using System.Linq;
 
 namespace SimpleBlogEngine.Controllers
 {
+    [EnableCors("AllowMyOrigin")]
     public class BlogController : BaseController
     {
         private BlogPostsSettings _blogPostsConfig;

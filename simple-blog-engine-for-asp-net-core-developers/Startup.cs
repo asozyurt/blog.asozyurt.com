@@ -55,6 +55,13 @@ namespace SimpleBlogEngine
 
             //call this in case you need aspnet-user-authtype/aspnet-user-identity
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowMyOrigin",
+                builder => builder.WithOrigins("http://asozyurt", "http://localhost", "http://asozyurt.com", "asozyurt.com", "http://localhost/asozyurt", "localhost/asozyurt", "localhost"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -99,6 +106,10 @@ namespace SimpleBlogEngine
 
             siteConfigMonitor.CurrentValue.Theme.HeaderImage = siteConfigMonitor.CurrentValue.Theme.HeaderImage.Replace("/{theme}", "").Replace("{theme}", "");
 
+            app.UseCors(
+             options => options.WithOrigins("http://asozyurt.com", "asozyurt.com", "http://localhost/asozyurt", "localhost/asozyurt", "localhost", "http://localhost").AllowAnyMethod()
+             );
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -132,6 +143,7 @@ namespace SimpleBlogEngine
 
             loggerFactory.AddNLog();
             app.AddNLogWeb();
+         
         }
 
         private string GetPathToSettingsFile(string settingsFileName)
