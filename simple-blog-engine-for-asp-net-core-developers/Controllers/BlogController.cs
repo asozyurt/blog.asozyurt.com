@@ -58,8 +58,9 @@ namespace SimpleBlogEngine.Controllers
             {
                 if (!_cache.TryGetValue(CacheKeys.RecentBlogPosts, out cacheEntry))
                 {
-                    cacheEntry = _blogPostsConfig.Blogs.Where(x => x.Published).OrderByDescending(x => x.CreateDate.Date).Take(_blogPostsConfig.NumberOfRecentBlogPostsToServeInApi).ToList();
-
+                    var blogPosts = _blogPostsConfig.Blogs.Where(x => x.Published).OrderByDescending(x => x.CreateDate.Date).Take(_blogPostsConfig.NumberOfRecentBlogPostsToServeInApi).ToList();
+                    blogPosts.ForEach(x => x.Content = string.Empty);
+                    cacheEntry = blogPosts;
                     // Set cache options.
                     var cacheEntryOptions = new MemoryCacheEntryOptions()
                         .SetSlidingExpiration(TimeSpan.FromHours(3));
