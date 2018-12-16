@@ -17,8 +17,8 @@
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "dotnet-core-3-cikiyor-yenilikler-neler",
       "view": "dotnet-core-3-cikiyor-yenilikler-neler.md",
-      "tags": [ ".NetCore", "Dotnet", "Core", "Teknoloji" ],
-      "categories": [ "Teknoloji" ]
+      "tags": [ ".NetCore", ".NetCore 3", "Development", "Teknoloji" ],
+      "categories": [ "Teknoloji", ".NetCore" ]
     },
     {
       "published": true,
@@ -58,7 +58,7 @@
       "published": true,
       "title": "XAMARIN FORMS SWIPE GESTURE",
       "description": "Xamarin Formstaki temel sorunlardan birisi de Gesture (Kullanıcı Etkileşimleri) ların yetersiz olması. Pan (Kaydırma), Pinch (Çift Parmak) ve Tap (Tıklama) hareketleri için bir yapı var evet ama çoğu uygulamada kullandığımız Swipe (Kaydırma) için bir yapı yok.",
-      "image": "~/img/xamarinSwipe.jpg",
+      "image": "http://blog.asozyurt.com/img/xamarinSwipe.jpg",
       "createdate": {
         "year": "2017",
         "month": "04",

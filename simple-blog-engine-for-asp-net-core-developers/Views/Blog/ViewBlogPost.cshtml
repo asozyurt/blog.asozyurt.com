@@ -1,7 +1,6 @@
 ﻿@model BlogPost
 @using SimpleBlogEngine.Extensions
 @using blog.asozyurt.com.Utility
-@using Markdig
 
 @inject Microsoft.Extensions.Options.IOptionsMonitor<DisqusSettings> disqusSettings
 @inject Microsoft.Extensions.Options.IOptionsMonitor<AddThisSettings> addThisSettings
@@ -40,7 +39,7 @@
     </center>
 }
 
-@Html.Raw(Markdown.ToHtml(FileReader.GetBlogPostContent(Model)))
+@Html.Raw(Model.Content)
 
 @Html.Partial("_hook_blogPostAfterBlogContent", Model)
 

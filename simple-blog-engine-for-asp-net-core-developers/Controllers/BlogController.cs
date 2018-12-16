@@ -1,23 +1,33 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using blog.asozyurt.com.Models;
+using blog.asozyurt.com.Utility;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SimpleBlogEngine.Models;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 
 namespace SimpleBlogEngine.Controllers
 {
     [EnableCors("AllowMyOrigin")]
     public class BlogController : BaseController
     {
+        private IMemoryCache _cache;
+        private ILogger _logger;
         private BlogPostsSettings _blogPostsConfig;
         public BlogController(
-            IHostingEnvironment hostingEnvironment,
-            IOptionsMonitor<BlogPostsSettings> blogPostsConfig) : base(hostingEnvironment)
+            IHostingEnvironment hostingEnvironment, IOptionsMonitor<BlogPostsSettings> blogPostsConfig, IMemoryCache cache, ILogger<BlogController> logger)
+            : base(hostingEnvironment)
         {
             _blogPostsConfig = blogPostsConfig.CurrentValue;
+            _cache = cache;
+            _logger = logger;
         }
 
         public IActionResult ViewBlogPost(int year, int month, string slug)
@@ -27,6 +37,7 @@ namespace SimpleBlogEngine.Controllers
             {
                 return this.NotFound();
             }
+            blogPost.Content = BlogPostContentReader.GetContent(blogPost, _cache, _logger);
             return View(blogPost);
         }
 
@@ -42,16 +53,27 @@ namespace SimpleBlogEngine.Controllers
 
         public List<BlogPost> GetRecentBlogPosts()
         {
+            List<BlogPost> cacheEntry = null;
             try
             {
-                var blogPost = _blogPostsConfig.Blogs.Where(x => x.Published).OrderByDescending(x => x.CreateDate.Date).Take(_blogPostsConfig.NumberOfRecentBlogPostsToServeInApi);
-                return blogPost.ToList();
+                if (!_cache.TryGetValue(CacheKeys.RecentBlogPosts, out cacheEntry))
+                {
+                    cacheEntry = _blogPostsConfig.Blogs.Where(x => x.Published).OrderByDescending(x => x.CreateDate.Date).Take(_blogPostsConfig.NumberOfRecentBlogPostsToServeInApi).ToList();
+
+                    // Set cache options.
+                    var cacheEntryOptions = new MemoryCacheEntryOptions()
+                        .SetSlidingExpiration(TimeSpan.FromHours(3));
+
+                    // Save data in cache.
+                    _cache.Set(CacheKeys.RecentBlogPosts, cacheEntry, cacheEntryOptions);
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                // TODO: Log error
-                return null;
+                _logger.LogError("Error at GetRecentBlogPosts with exception: " + ex);
             }
+
+            return cacheEntry;
         }
 
     }

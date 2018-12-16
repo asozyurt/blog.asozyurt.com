@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using blog.asozyurt.com.Utility;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -56,6 +57,7 @@ namespace SimpleBlogEngine
             //call this in case you need aspnet-user-authtype/aspnet-user-identity
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            services.AddMemoryCache();
 
             services.AddCors(options =>
             {
@@ -143,7 +145,6 @@ namespace SimpleBlogEngine
 
             loggerFactory.AddNLog();
             app.AddNLogWeb();
-         
         }
 
         private string GetPathToSettingsFile(string settingsFileName)
