@@ -51,7 +51,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: white;
-    padding: 30px;
+    /*padding: 30px;*/
     color: #333;
 }
 
@@ -693,6 +693,7 @@ a.mobile-btn {
     padding-top: 20px;
     font-size: 24px;
     padding-left: 20px;
+    border-bottom: none;
     text-align: left;
     display: none;
 }
@@ -842,7 +843,7 @@ a.mobile-btn {
 
 
 .expertise:last-child .exp-det {
-    border-bottom: none;
+    border-bottom: none!important;
 }
 
 /*End about section*/
@@ -2374,13 +2375,13 @@ ul.latest-post a {
     a.mobile-btn {
         display: inline-block;
         position: sticky;
-        top: 23px;
         right: 15px;
         z-index: 1001;
     }
 
     .mobile-title {
         display: inline-block;
+        border-bottom: none;
     }
 
     .main-nav ul.menu {
@@ -2590,13 +2591,13 @@ ul.latest-post a {
     a.mobile-btn {
         display: inline-block;
         position: sticky;
-        top: 23px;
         right: 15px;
         z-index: 1001;
     }
 
     .mobile-title {
         display: inline-block;
+        border-bottom: none;
     }
 
     .main-nav ul.menu {
@@ -2882,13 +2883,13 @@ ul.latest-post a {
     a.mobile-btn {
         display: inline-block;
         position: sticky;
-        top: 23px;
         right: 15px;
         z-index: 1001;
     }
 
     .mobile-title {
         display: inline-block;
+        border-bottom: none;
     }
 
     .main-nav ul.menu {
