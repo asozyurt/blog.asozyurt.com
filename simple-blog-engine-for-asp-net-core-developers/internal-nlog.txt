@@ -5,3 +5,17 @@
 2018-12-16 23:59:25.4205 Warn Skipping unknown node: extensions
 2018-12-16 23:59:25.5415 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
 2018-12-16 23:59:25.5415 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-19 10:04:50.9629 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-19 10:04:50.9978 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-19 10:04:43.4727 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-19 10:04:43.5014 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-19 10:05:24.2124 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-19 10:05:24.2422 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-20 22:48:17.9987 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-20 22:48:18.0333 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-20 22:58:26.3316 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-20 22:58:26.3624 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-20 23:02:27.2732 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-20 23:02:27.3048 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-20 23:03:31.5756 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
+2018-12-20 23:03:31.6099 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.

@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  blog.asozyurt.com:
+    image: ${DOCKER_REGISTRY-}blogasozyurtcom
+    build:
+      context: .
+      dockerfile: simple-blog-engine-for-asp-net-core-developers\Dockerfile
+    ports:
+    - "5000"

@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  blog.asozyurt.com:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+networks:
+  default:
+    external:
+      name: nat
