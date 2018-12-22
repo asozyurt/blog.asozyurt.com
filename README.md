@@ -57,4 +57,4 @@ I added some new features over the original repo and changed appearance. After t
 
 ##### Here is a screenshot for mainpage
 
-![](http://blog.asozyurt.com/img/blog_screenshot.jpg)]
+![](http://blog.asozyurt.com/img/blog_screenshot.jpg)
