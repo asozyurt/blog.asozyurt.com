@@ -28,9 +28,10 @@ I added some new features over the original repo and changed appearance. After t
 
 * Database usage - Not sure, actually I don't want it but at some point it would be necessary 
 * Change where blog posts and settings are stored
+* Cloud Hosting
 
 #### Adding A New BlogPost
-* Add your Md file to __blogSource_ directory
+* Add your Md or Html file to __blogSource_ directory
 * Edit _blogPosts.json_ and insert new post metadata like this:
 
 ```json
@@ -56,4 +57,4 @@ I added some new features over the original repo and changed appearance. After t
 
 ##### Here is a screenshot for mainpage
 
-[![](http://blog.asozyurt.com/img/blog_screenshot.jpg)]
+![](http://blog.asozyurt.com/img/blog_screenshot.jpg)]
