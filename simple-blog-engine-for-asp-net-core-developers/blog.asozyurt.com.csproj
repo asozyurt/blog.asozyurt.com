@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <Authors>Ahmet Selçuk Özyurt</Authors>
     <Description>A Very Simple Blog Engine For .Net Core Developers</Description>
@@ -19,17 +19,43 @@
 
   <ItemGroup>
     <None Remove="internal-nlog.txt" />
+    <None Remove="Views\_blogSource\bilgisayarlarda-bilinen-ilk-bug.md" />
+    <None Remove="Views\_blogSource\bir-projeye-baglanmak.md" />
     <None Remove="Views\_blogSource\dotnet-core-3-cikiyor-yenilikler-neler.md" />
+    <None Remove="Views\_blogSource\girisime-hayat-vermek-turkiyede-sirket-kurmak.md" />
+    <None Remove="Views\_blogSource\harweast-developer-union.md" />
+    <None Remove="Views\_blogSource\mosx-arac-durum-kontrol-cihazi.md" />
+    <None Remove="Views\_blogSource\nissan-qashqai-yorumlarim.md" />
     <None Remove="Views\_blogSource\olun-bizi-ayirana-dek.md" />
+    <None Remove="Views\_blogSource\xamarin-forms-ile-image-zoom.md" />
+    <None Remove="Views\_blogSource\xamarin-forms-swipe-gesture.md" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Views\_blogSource\bilgisayarlarda-bilinen-ilk-bug.md" />
+    <Content Include="Views\_blogSource\bir-projeye-baglanmak.md">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Include="Views\_blogSource\dotnet-core-3-cikiyor-yenilikler-neler.md">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Include="Views\_blogSource\girisime-hayat-vermek-turkiyede-sirket-kurmak.md">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Include="Views\_blogSource\harweast-developer-union.md">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Include="Views\_blogSource\mosx-arac-durum-kontrol-cihazi.md">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Include="Views\_blogSource\nissan-qashqai-yorumlarim.md" />
     <Content Include="Views\_blogSource\olun-bizi-ayirana-dek.md">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Include="Views\_blogSource\xamarin-forms-ile-image-zoom.md">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Include="Views\_blogSource\xamarin-forms-swipe-gesture.md" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,21 +94,6 @@
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Views\Shared\_allCategoriesList.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
-    <Content Update="Views\_blogSource\bir-projeye-baglanmak.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
-    <Content Update="Views\_blogSource\harweast-developer-union.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
-    <Content Update="Views\_blogSource\mosx-arac-durum-kontrol-cihazi.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
-    <Content Update="Views\_blogSource\xamarin-forms-ile-image-zoom.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
-    <Content Update="Views\_blogSource\girisime-hayat-vermek-turkiyede-sirket-kurmak.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>

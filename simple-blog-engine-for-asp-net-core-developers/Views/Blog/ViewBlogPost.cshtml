@@ -1,6 +1,5 @@
 ﻿@model BlogPost
 @using SimpleBlogEngine.Extensions
-@using blog.asozyurt.com.Utility
 
 @inject Microsoft.Extensions.Options.IOptionsMonitor<DisqusSettings> disqusSettings
 @inject Microsoft.Extensions.Options.IOptionsMonitor<AddThisSettings> addThisSettings
@@ -12,7 +11,7 @@
 
 @Html.Partial("_hook_blogPostBefore", Model)
 
-<h2 class="my-4 text-center" style="font-size: x-large!important; margin-top: 50px !important;">
+<h2 class="my-4 text-center mt-50" style="font-size: x-large!important">
     <a href="@postURL">@Model.Title</a>
 </h2>
 
@@ -38,8 +37,9 @@
         <img class="img-fluid text-center" src="@Model.Image" />
     </center>
 }
-
+<div class="blog-post-container">
 @Html.Raw(Model.Content)
+</div>
 
 @Html.Partial("_hook_blogPostAfterBlogContent", Model)
 
@@ -58,7 +58,7 @@
             for (int i = 0; i < tagCount; i++)
             {
                 var tag = Model.Tags[i];
-                <a href="~/tag/@tag.MakeURLFriendly()">@tag</a>if (i < tagCount - 1)
+                <a class="no-underline" href="~/tag/@tag.MakeURLFriendly()">@tag</a>if (i < tagCount - 1)
                 {<text>, </text>}
         }
     }

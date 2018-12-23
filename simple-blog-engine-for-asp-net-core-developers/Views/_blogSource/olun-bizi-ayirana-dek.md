@@ -12,7 +12,7 @@ Maceralı bir 1 saat sonunda salona ulaştım ve yerime geçtim. Fuar'a daha ön
 
 Bu sebeple uzun oyunlar için çok tercih edilecek bir yer değil açıkçası, ama açık hava olmasının da ayrı hava kattığını söyleyeyim. Ses düzeni iyi ise orta şeker bir atmosferde oyunu izleyebilirsiniz.
 
-<center><img class="img-fluid" title="Ölü'n Bizi Ayırana Dek" src="http://blog.asozyurt.com/img/olunBiziAyiranaDekSahne.jpg" /></center>
+<p class="text-center"><img class="img-fluid" title="Ölü'n Bizi Ayırana Dek" src="http://blog.asozyurt.com/img/olunBiziAyiranaDekSahne.jpg" /></p>
 
 ##### Oyundan kısaca bahsedecek olursak;
 
@@ -29,7 +29,7 @@ Kötü bir yorum gibi görünüyor ama değil aslında, çünkü oyunun size sun
 >
 > Ne yapacağını bilemeyen çiftimiz bir yandan 'Hangimiz katil?' sorusuna yanıt ararken bir yandan da ilişkilerini, evliliklerini, geçmişlerini, kendilerini bulundukları noktaya taşıyan olayları yeniden değerlendirecek ve karşılarına çıkacak bambaşka sürprizlerle mücadele etmeye çalışacaktır.
 
-<center>
+<p class="text-center">
     <img class="img-fluid" title="Hakan Yılmaz" src="http://blog.asozyurt.com/img/hakanYilmaz.jpg" />
     <img class="img-fluid" title="Ebru Cündübeyoğlu" src="http://blog.asozyurt.com/img/ebruCundubeyoglu.jpg" />
-</center>
+</p>

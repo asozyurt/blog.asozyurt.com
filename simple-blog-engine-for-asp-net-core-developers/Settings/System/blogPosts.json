@@ -50,7 +50,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "harweast-developer-union",
-      "view": "harweast-developer-union.cshtml",
+      "view": "harweast-developer-union.md",
       "tags": [ "developers", "harweast", "team" ],
       "categories": [ "Blog", "Girişim" ]
     },
@@ -67,7 +67,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "xamarin-forms-swipe-gesture",
-      "view": "xamarin-forms-swipe-gesture.cshtml",
+      "view": "xamarin-forms-swipe-gesture.md",
       "tags": [ "swipe", "swipe gesture", "Xamarin", "xamarin behaviors", "gestures" ],
       "categories": [ "Xamarin", "Mobile Development", "Teknoloji" ]
     },
@@ -84,7 +84,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "nissan-qashqai-yorumlarim",
-      "view": "nissan-qashqai-yorumlarim.cshtml",
+      "view": "nissan-qashqai-yorumlarim.md",
       "tags": [ "araba inceleme", "car", "car review", "ilk izlenimler", "nissan", "qashqai", "skypack", "xtronic", "yakıt tüketimi" ],
       "categories": [ "Blog", "Arabalar", "İncelemeler" ]
     },
@@ -101,7 +101,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "bilgisayarlarda-bilinen-ilk-bug",
-      "view": "bilgisayarlarda-bilinen-ilk-bug.cshtml",
+      "view": "bilgisayarlarda-bilinen-ilk-bug.md",
       "tags": [ "bilgisayar", "bug", "computer", "güve", "grace hopper", "moth" ],
       "categories": [ "Blog", "Teknoloji" ]
     },
@@ -118,7 +118,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "mosx-arac-durum-kontrol-cihazi",
-      "view": "mosx-arac-durum-kontrol-cihazi.cshtml",
+      "view": "mosx-arac-durum-kontrol-cihazi.md",
       "tags": [ "araç arıza", "araç durum", "corsa d", "Girişim", "mobilotoservis", "mosx", "mosx yorum", "mosx kullananlar", "OBDII", "opel" ],
       "categories": [ "Blog", "Teknoloji", "Girişim" ]
     },
@@ -135,7 +135,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "xamarin-forms-ile-image-zoom",
-      "view": "xamarin-forms-ile-image-zoom.cshtml",
+      "view": "xamarin-forms-ile-image-zoom.md",
       "tags": [ "gestures", "pinch", "Xamarin", "xamarin forms", "zoom", "zoom image" ],
       "categories": [ "Xamarin", "Mobile Development", "Teknoloji" ]
     },
@@ -152,7 +152,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "girisime-hayat-vermek-turkiyede-sirket-kurmak",
-      "view": "girisime-hayat-vermek-turkiyede-sirket-kurmak.cshtml",
+      "view": "girisime-hayat-vermek-turkiyede-sirket-kurmak.md",
       "tags": [ "girişim", "startup", "Uğur Yedikardeş", "şirket kurma" ],
       "categories": [ "Blog", "Alıntı", "Girişim", "Teknoloji" ]
     },
@@ -169,7 +169,7 @@
       },
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "bir-projeye-baglanmak",
-      "view": "bir-projeye-baglanmak.cshtml",
+      "view": "bir-projeye-baglanmak.md",
       "tags": [ "adopting a project", "developers dream", "proje", "project", "dream project" ],
       "categories": [ "Blog" ]
     }

@@ -53,6 +53,6 @@ Range ise iki Index kullanarak dizinin belirli bir kısmını ifade edebileceği
 Tiered Compilation, yazdığınız metotların .Net Framework ü tarafından farklı optimizasyon seviyelerinde derlenmesi demektir. Uygulama açılışında ve uygulama çalışırken metotların en performanslı olabilecek versiyonu Framework tarafından belirlenir ve çalıştırılır.
 
 
-**Kaynak**
+__Kaynak__
 
 [https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/?MC=Vstudio&MC=CSHARP&MC=.NET&MC=CCPLUS&MC=JavaScript)

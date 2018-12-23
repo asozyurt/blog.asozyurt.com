@@ -44,6 +44,7 @@ namespace SimpleBlogEngine.Models
             Meta.TotalBlogPosts = Blogs.Count;
             Meta.TotalPages = (Meta.TotalBlogPosts + BlogsPerPage - 1) / BlogsPerPage;
             Meta.Tags = new List<BlogPostTag>();
+            Meta.Categories = new List<BlogPostCategory>();
             foreach (var blogPost in Blogs)
             {
                 foreach (var tag in blogPost.Tags)
@@ -58,10 +59,6 @@ namespace SimpleBlogEngine.Models
                         existingTag.Count++;
                     }
                 }
-            }
-            Meta.Categories = new List<BlogPostCategory>();
-            foreach (var blogPost in Blogs)
-            {
                 foreach (var category in blogPost.Categories)
                 {
                     var existingCategory = Meta.Categories.SingleOrDefault(t => t.Category.ToLower() == category.ToLower());
@@ -75,6 +72,7 @@ namespace SimpleBlogEngine.Models
                     }
                 }
             }
+            
             return this;
         }
 
