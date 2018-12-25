@@ -161,13 +161,13 @@ li p.first {
     padding-left: 30px !important;
 }
 
-ul :first-child, ol :first-child {
-    margin-top: 0;
-}
+    ul :first-child, ol :first-child {
+        margin-top: 0;
+    }
 
-ul :last-child, ol :last-child {
-    margin-bottom: 0;
-}
+    ul :last-child, ol :last-child {
+        margin-bottom: 0;
+    }
 
 dl {
     padding: 0;
@@ -392,6 +392,7 @@ pre {
         background-color: transparent;
         border: none;
     }
+
 .blog-post-container a {
     color: #199cdb !important;
     text-decoration: underline !important;
@@ -1309,6 +1310,14 @@ a.mobile-btn {
     padding: 0 15px;
 }
 
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
 
 .item {
     margin-bottom: 30px;

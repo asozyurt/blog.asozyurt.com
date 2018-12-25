@@ -448,6 +448,14 @@ a, .t-active span, .desc, .item img, .contact-form .submit, .reply-form .submit,
     padding-top: 160px !important;
 }
 
+.pl-0 {
+    padding-left: 0px !important;
+}
+
+.pl-70 {
+    padding-left: 70px !important;
+}
+
 .pb-160 {
     padding-bottom: 160px !important;
 }

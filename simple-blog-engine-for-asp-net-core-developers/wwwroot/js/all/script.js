@@ -9,18 +9,6 @@
             speed: 800,
             offset: -64
         });
-        $("#block-slider").owlCarousel({
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            responsiveRefreshRate: 200,
-            responsiveBaseWidth: window,
-            pagination: false,
-            singleItem: true,
-            navigation: true,
-            navigationText: ["<span class='icon-left-open-big'></span>", "<span class='icon-right-open-big'></span>"]
-        });
-       
-       
         // To the top handler
 
         $().UItoTop({ easingType: 'easeOutQuart' });

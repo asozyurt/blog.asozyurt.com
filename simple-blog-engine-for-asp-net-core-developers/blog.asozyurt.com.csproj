@@ -59,6 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
     <PackageReference Include="Markdig" Version="0.15.5" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.2105168" />
@@ -75,18 +76,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\js\main\easing.js" />
-    <None Include="wwwroot\js\main\instafeed.min.js" />
-    <None Include="wwwroot\js\main\jquery.appear.min.js" />
-    <None Include="wwwroot\js\main\jquery.magnific-popup.js" />
-    <None Include="wwwroot\js\main\jquery.smooth-scroll.js" />
-    <None Include="wwwroot\js\main\jquery.ui.totop.min.js" />
-    <None Include="wwwroot\js\main\lang.js" />
-    <None Include="wwwroot\js\main\masonry.min.js" />
-    <None Include="wwwroot\js\main\owl.carousel.js" />
-    <None Include="wwwroot\js\main\placeholders.min.js" />
-    <None Include="wwwroot\js\main\script.js" />
-    <None Include="wwwroot\js\main\timer.js" />
+    <None Include="wwwroot\js\all\easing.js" />
+    <None Include="wwwroot\js\all\jquery.appear.min.js" />
+    <None Include="wwwroot\js\all\jquery.smooth-scroll.js" />
+    <None Include="wwwroot\js\all\jquery.ui.totop.min.js" />
+    <None Include="wwwroot\js\all\placeholders.min.js" />
+    <None Include="wwwroot\js\all\script.js" />
+    <None Include="wwwroot\js\all\timer.js" />
   </ItemGroup>
 
   <ItemGroup>

@@ -22,18 +22,6 @@
 <body class="page-@ViewBag.PageId">
     @Html.Partial("_navBar")
     <div class="container pl-4 pr-0">
-        <div class="row header-row-container">
-            <div class="col-xs-12 header-row">
-                @Html.Partial("_hook_headerTop")
-                @{if (!string.IsNullOrEmpty(siteSettings.CurrentValue.Theme.HeaderImage))
-                    {
-                        <a href="/">
-                            <img src="/themes/@siteSettings.CurrentValue.Theme.ThemeName/@siteSettings.CurrentValue.Theme.HeaderImage" class="img-fluid" />
-                        </a>
-                    }}
-                @Html.Partial("_hook_headerBottom")
-            </div>
-        </div>
         <div class="row">
             <div class="col-sm-12 col-lg-8 col-xl-9 main-body pl-0 pr-20">
                 @Html.Partial("_hook_bodyTop")
@@ -51,7 +39,6 @@
             </div>
         </div>
     </div>
-    @*<footer class="bg-dark">*@
     <div class="container">
         @Html.Partial("_hook_footerTop")
         @Html.Partial("_footer")
