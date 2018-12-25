@@ -53,6 +53,9 @@ namespace SimpleBlogEngine
 
             services.Configure<RazorViewEngineOptions>(o => { o.ViewLocationExpanders.Add(new CustomViewLocationExpander()); });
 
+            //call this in case you need aspnet-user-authtype/aspnet-user-identity
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddMemoryCache();
 
             services.AddCors(options =>
