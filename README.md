@@ -13,11 +13,11 @@ I added some new features over the original repo and changed appearance. After t
 * [Docker](https://www.docker.com/) support
 * In-memory cache to increase performance
 * CORS setup for api usage
+* Resource bundling added for js and css files
 
 #### What's Next
 
 * Language Support
-* Resource bundling
 * Admin Panel 
 	* Secure Logon
 	* Blog Post Edit (_Prototype api is ready_)
