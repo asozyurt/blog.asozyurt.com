@@ -1,3 +1,0 @@
-2018-12-25 23:52:30.3133 Warn Skipping unknown node: extensions
-2018-12-25 23:52:30.4073 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
-2018-12-25 23:52:30.4129 Warn Missing IHttpContextAccessor. Has it been registered before loading NLog Configuration? Consider reloading NLog Configuration after having registered the IHttpContextAccessor.
