@@ -9,14 +9,14 @@
     ViewBag.PageId = "blog-post";
 }
 
-@Html.Partial("_hook_blogPostBefore", Model)
+<partial name="_hook_blogPostBefore" for="@Model" />
 
 <h2 class="my-4 text-center pt-50 mt-5">
     <a href="@postURL">@Model.Title</a>
 </h2>
 
 <div class="blogpost-meta text-center">
-    @Html.Partial("_hook_blogPostMetaTop", Model)
+    <partial name="_hook_blogPostMetaTop" for="@Model" />
     <span>@Model.CreateDate.Display</span>
     <span> @Model.Author</span>
     @if (disqusSettings.CurrentValue.IsEnabled)
@@ -24,12 +24,13 @@
         <span class="separator">/</span>
         <a href="@postURL#disqus_thread">Yorumlar</a>
     }
-    @Html.Partial("_hook_blogPostMetaBottom", Model)
+    <partial name="_hook_blogPostMetaBottom" for="@Model" />
+
 </div>
 
 <hr />
 
-@Html.Partial("_hook_blogPostBeforeBlogContent", Model)
+<partial name="_hook_blogPostBeforeBlogContent" for="@Model" />
 
 @if (!string.IsNullOrEmpty(Model.Image))
 {
@@ -38,10 +39,10 @@
     </center>
 }
 <div class="blog-post-container">
-@Html.Raw(Model.Content)
+    @Html.Raw(Model.Content)
 </div>
 
-@Html.Partial("_hook_blogPostAfterBlogContent", Model)
+<partial name="_hook_blogPostAfterBlogContent" for="@Model" />
 
 <p class="blogpost-tags">
     @{
@@ -65,19 +66,19 @@
     }
 </p>
 
-@Html.Partial("_hook_blogPostBeforeShareButtons", Model)
-@Html.Partial("_shareButtons", addThisSettings.CurrentValue)
+<partial name="_hook_blogPostBeforeShareButtons" for="@Model" />
+<partial name="_shareButtons" for="@addThisSettings.CurrentValue" />
 
 @if (ViewBag.DontShowAddThis == null)
 {
     <div class="addthis_inline_share_toolbox"></div>
 }
 
-@Html.Partial("_hook_blogPostBeforeComments", Model)
+<partial name="_hook_blogPostBeforeComments" for="@Model" />
 
 @if (ViewBag.DontShowComments == null)
 { // The blog listing pages show blog posts without comments
-    @Html.Partial("/Views/Shared/_comments.cshtml", disqusSettings.CurrentValue)
+    <partial name="/Views/Shared/_comments.cshtml" for="@disqusSettings.CurrentValue" />
 }
 else if (disqusSettings.CurrentValue.IsEnabled)
 {
@@ -86,10 +87,9 @@ else if (disqusSettings.CurrentValue.IsEnabled)
     </div>
 }
 
-@Html.Partial("_hook_blogPostAfterComments", Model)
-
-@Html.Partial("_hook_blogPostAfter", Model)
+<partial name="_hook_blogPostAfterComments" for="@Model" />
+<partial name="_hook_blogPostAfter" />
 
 @section Scripts {
-    @Html.Partial("_comments", disqusSettings.CurrentValue)
+    <partial name="_comments" for="@disqusSettings.CurrentValue" />
 }

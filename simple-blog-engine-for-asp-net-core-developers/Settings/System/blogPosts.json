@@ -1,8 +1,25 @@
 ﻿{
-  "blogsPerPage": 3,
+  "blogsPerPage": 4,
   "NumberOfRecentBlogPostsToServeInApi": 3,
-  "NumberOfRecentBlogPostsToShowInSidebar": 5,
+  "NumberOfRecentBlogPostsToShowInSidebar": 6,
   "blogs": [
+    {
+      "published": true,
+      "title": ".NET CORE WEB İÇİN BUNDLING VE MINIFICATION",
+      "description": "İrili ufaklı bütün projelerimizde birden fazla css ve js dosyaları kullanıyoruz. Kullandığımız temalardan, eklediğimiz üçüncü parti bileşenlerden ve kendi yazdığımız özelliklerden gelen bazen sayısı 20leri bile geçen dosyalar oluyor projemizde.",
+      "image": "http://blog.asozyurt.com/img/bundle.jpg",
+      "createdate": {
+        "year": "2018",
+        "month": "12",
+        "day": "29",
+        "display": " 29 Ara 2018"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "dotnet-core-web-icin-bundling-ve-minification",
+      "view": "dotnet-core-web-icin-bundling-ve-minification.md",
+      "tags": [ ".Net Core", "Bundle", "Minify", "Bundling", "Minification", "Bundler&Minifier" ],
+      "categories": [ "Teknoloji", ".Net Core" ]
+    },
     {
       "published": true,
       "title": ".NET CORE 3 ÇIKIYOR - YENİLİKLER NELER",
@@ -17,8 +34,8 @@
       "Author": "Ahmet Selçuk Özyurt",
       "slug": "dotnet-core-3-cikiyor-yenilikler-neler",
       "view": "dotnet-core-3-cikiyor-yenilikler-neler.md",
-      "tags": [ ".NetCore", ".NetCore 3", "Development", "Teknoloji" ],
-      "categories": [ "Teknoloji", ".NetCore" ]
+      "tags": [ ".Net Core", ".NetCore 3", "Development", "Teknoloji" ],
+      "categories": [ "Teknoloji", ".Net Core" ]
     },
     {
       "published": true,

@@ -94,9 +94,9 @@
 </section>
 <!--End blog section-->
 
-@Html.Partial("_hook_pagingControlBefore")
-@Html.Partial("~/Views/Shared/_pagingControl.cshtml", Model)
-@Html.Partial("_hook_pagingControlAfter")
+<partial name="_hook_pagingControlBefore" for="@Model" />
+<partial name="~/Views/Shared/_pagingControl.cshtml" for="@Model" />
+<partial name="_hook_pagingControlAfter" for="@Model" />
 
 @section Scripts {
     @if (disqusSettings.CurrentValue.IsEnabled)

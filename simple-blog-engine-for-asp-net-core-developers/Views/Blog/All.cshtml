@@ -4,7 +4,7 @@
     ViewData["Title"] = "Tüm Yazılar";
 }
 
-@Html.Partial("_allBlogPostsHeader")
+<partial name="_allBlogPostsHeader" />
 
 @foreach (var blogPost in blogPostConfigMonitor.CurrentValue.Blogs)
 {

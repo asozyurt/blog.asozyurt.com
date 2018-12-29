@@ -24,8 +24,6 @@
 *, *:before, *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
 }
 
 
@@ -99,7 +97,6 @@ a:focus {
 
 iframe {
     width: 100%;
-    frameborder: 0;
     display: inline-block;
     vertical-align: bottom;
 }
@@ -150,8 +147,6 @@ small {
     border-radius: 100%;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
 }
 
 
@@ -311,7 +306,6 @@ ul.list li {
 
 a, .t-active span, .desc, .item img, .contact-form .submit, .reply-form .submit, input, textarea, .insta-Feed li a:before {
     transition: all 0.4s ease-in-out 0s;
-    -ms-transition: all 0.4s ease-in-out 0s;
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
     -o-transition: all 0.4s ease-in-out 0s;
@@ -324,8 +318,6 @@ a, .t-active span, .desc, .item img, .contact-form .submit, .reply-form .submit,
     border-radius: 20px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
     font-size: 15px;
 }
 
