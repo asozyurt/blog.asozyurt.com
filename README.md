@@ -9,7 +9,7 @@ I added some new features over the original repo and changed appearance. After t
 * MarkDown format support by using [MarkDig](https://github.com/lunet-io/markdig)
 * Featured Image property added
 * Category property added to blog posts and search/list by category
-* .NetCore upgrade to version 3
+* .NetCore upgrade to version 2.1 (will be 3 when ready)
 * [Docker](https://www.docker.com/) support
 * In-memory cache to increase performance
 * CORS setup for api usage
