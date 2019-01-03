@@ -3,7 +3,7 @@
     // Document ready
 
     $(document).ready(function () {
-        
+
         // Section scroll 
         $('a.scroll').smoothScroll({
             speed: 800,
@@ -44,3 +44,12 @@
     });
 
 })(jQuery);
+
+validateSearchForm = function () {
+    var searchText = document.forms["searchForm"]["searchText"].value;
+    if (searchText === null || searchText === "" || searchText.length < 3) {
+        document.forms["searchForm"]["searchText"].style.borderColor = "#963634";
+        return false;
+    }
+    return true;
+};

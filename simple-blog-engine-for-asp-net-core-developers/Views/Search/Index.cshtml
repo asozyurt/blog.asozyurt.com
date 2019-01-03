@@ -2,19 +2,35 @@
 @inject Microsoft.Extensions.Options.IOptionsMonitor<SiteSettings> siteSettings
 @using SimpleBlogEngine.Extensions
 @{
-    ViewData["Title"] = Model.Tag.ToUpperInvariant() + " Etiketli Yazılar - Sayfa " + Model.CurrentPageNumber;
-    ViewData["Description"] = Model.Tag.ToUpperInvariant() + " Etiketli Yazılar - Sayfa " + Model.CurrentPageNumber;
+    ViewData["Title"] = "Arama Sonuçları {" + Model.SearchText + "} - Sayfa " + Model.CurrentPageNumber;
+    ViewData["Description"] = ViewData["Title"];
 
     ViewBag.DontShowComments = true;
     ViewBag.DontShowAddThis = true;
-    ViewBag.PageId = "tag";
+    ViewBag.PageId = "search";
 }
 
-<h4 class="my-4 h4 text-center pt-50">
-    @Model.Tag.ToUpperInvariant() ETİKETLİ YAZILAR
-</h4>
+@if (Model.SearchText == null)
+{
+    <h4 class="my-4 h4 text-center pt-50">OUUPS. BEN KAHİN MİYİM?</h4>
+}
+else
+{
+    <h4 class="my-4 h4 text-center pt-50">ARAMA SONUÇLARI {@Model.SearchText.ToUpperInvariant()}</h4>
+}
 
 <hr />
+@if (Model.SearchText == null)
+{
+    <div class="row">
+        <div class="post mb-30 mt-15 mr-1 ml-1 full-width">
+            <center>
+                <img class="img-fluid text-center" src="http://blog.asozyurt.com/img/emptySearchMonster.jpg" />
+            </center>
+        </div>
+    </div>
+}
+
 @{if (Model.PageOfBlogPosts != null && Model.PageOfBlogPosts.Count > 0)
     {
         foreach (var blogPost in Model.PageOfBlogPosts)

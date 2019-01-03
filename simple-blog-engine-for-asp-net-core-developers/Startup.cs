@@ -136,7 +136,10 @@ namespace SimpleBlogEngine
                         name: "tag",
                         template: "tag/{tag}",
                         defaults: new { controller = "Tag", action = "Index" });
-
+                routes.MapRoute(
+                    name: "search",
+                    template: "search/{searchText}",
+                    defaults: new { controller = "Search", action = "Index" });
                 routes.MapRoute(
                          name: "default",
                          template: "{controller=Home}/{action=Index}/{id?}");

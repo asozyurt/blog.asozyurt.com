@@ -32,6 +32,7 @@
                 <div class="hidden-md-down sidebar-spacer"></div>
                 <div class="block-sidebar bg-grey clearfix">
                     @Html.Partial("_hook_sideBarTop")
+                    @Html.Partial("_searchBar")
                     @Html.Partial("_recentPosts", blogPostConfigMonitor.CurrentValue)
                     @Html.Partial("_allCategoriesList", blogPostConfigMonitor.CurrentValue.Meta.Categories)
                     @Html.Partial("_hook_sideBarBottom")

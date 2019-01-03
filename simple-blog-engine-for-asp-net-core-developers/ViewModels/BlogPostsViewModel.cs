@@ -10,6 +10,7 @@ namespace SimpleBlogEngine.Models
         public List<BlogPost> PageOfBlogPosts { get; set; }
         public string Category { get; set; }
         public string Tag { get; set; }
+        public string SearchText { get; set; }
         public int CurrentPageNumber { get; set; }
     }
 }
