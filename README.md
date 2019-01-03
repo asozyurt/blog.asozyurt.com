@@ -14,9 +14,11 @@ I added some new features over the original repo and changed appearance. After t
 * In-memory cache to increase performance
 * CORS setup for api usage
 * Resource bundling added for js and css files
+* Search funcionality
 
 #### What's Next
 
+* RSS Support
 * Language Support
 * Admin Panel 
 	* Secure Logon
