@@ -15,10 +15,10 @@ I added some new features over the original repo and changed appearance. After t
 * CORS setup for api usage
 * Resource bundling added for js and css files
 * Search funcionality
+* RSS/ATOM Support [Rss](http://blog.asozyurt.com/rss) [Atom](http://blog.asozyurt.com/atom)
 
 #### What's Next
 
-* RSS Support
 * Language Support
 * Admin Panel 
 	* Secure Logon
