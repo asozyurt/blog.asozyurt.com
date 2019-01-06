@@ -1,0 +1,16 @@
+﻿@model List<string>
+@using SimpleBlogEngine.Extensions
+@{
+    ViewData["Title"] = "Tüm Etiketler";
+}
+
+<h3 class="my-4 h3 text-center pt-50">
+    TÜM ETİKETLER
+</h3>
+
+<ul class="tags">
+    @foreach (var tag in Model)
+    {
+        <li><a href="~/tag/@tag.MakeURLFriendly()" class="tag">@tag</a></li>
+    }
+</ul>

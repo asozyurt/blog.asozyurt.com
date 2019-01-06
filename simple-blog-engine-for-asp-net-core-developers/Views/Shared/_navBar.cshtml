@@ -1,6 +1,4 @@
-﻿@Html.Partial("_hook_navBarTop")
-
-<div class="nav-container base">
+﻿<div class="nav-container base">
     <nav class="main-nav switched-header">
 
         <!--Container-->
@@ -17,28 +15,38 @@
         </div>
         <!--End container-->
         <!--Container-->
-        <div class="container ">
+        <div class="container" style="max-width:100%">
             <!--Row-->
             <div class="row">
 
                 <div class="col-sm-5 t-center">
 
                     <ul class="menu first">
-                        <li><a class="scroll" href="http://asozyurt.com/index.html#home"><span id="menuHome">Asozyurt.Com</span><i class="icon-home"></i></a></li>
-                        <li class="menu-first-last-item"><a class="scroll" href="http://asozyurt.com/index.html#portfolio"><span id="menuPortfolio">Çalışmalar</span><i class="icon-droplet"></i></a></li>
+                        <li><a class="scroll" href="http://asozyurt.com/index.html#home"><i class="icon-home" style="color:darkred"></i><span id="menuHome"> Asozyurt.Com</span></a></li>
+                        <li class="dropdown">
+                            <a class="scroll" href="#"><i class="fas fa-layer-group"></i><span id="menuHome"> KATEGORİLER</span> &#11167;</a>
+                            <ul class="dropdown-menu">
+                                <li class="item-block scroll" style="display:block"><a href="~/category/Teknoloji">Teknoloji</a></li>
+                                <li class="item-block scroll" style="display:block"><a href="~/category/-net-core">.Net Core</a></li>
+                                <li class="item-block scroll" style="display:block"><a href="~/category/xamarin">Xamarin</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a class="menu-first-last-item scroll" href="~/tags"><i class="fas fa-tags"></i><span id="menuHome"> ETİKETLER</span></a></li>
                     </ul>
                 </div>
 
                 <div class="col-sm-2 pd-0 t-center">
                     <div class="name-profile">
-                        <h5 class="mb-0 mt-0 font-weight-normal pb-0"><a href="http://blog.asozyurt.com/">Asozyurt Blog<span id="shortBio">Blog Anasayfa</span></a></h5>
+                        <h5 class="mb-0 mt-0 font-weight-normal pb-0"><a href="~/">Asozyurt Blog</a></h5>
                     </div>
                 </div>
 
                 <div class="col-sm-5 t-center">
                     <ul class="menu second">
-                        <li><a class="scroll" href="http://asozyurt.com/index.html#about"><span id="menuAbout">Hakkımda</span><i class="icon-user"></i></a></li>
-                        <li><a class="scroll" href="http://asozyurt.com/index.html#contact"><span id="menuContact">İLETİŞİM</span><i class="icon-paper-plane"></i></a></li>
+                        <li class="scroll"><a class="scroll" href="http://asozyurt.com/index.html#portfolio"><i class="icon-droplet"></i><span id="menuPortfolio"> Çalışmalar</span></a></li>
+                        <li><a class="scroll" href="http://asozyurt.com/index.html#about"><i class="icon-user"></i><span id="menuAbout"> Hakkımda</span></a></li>
+                        <li><a class="scroll" href="http://asozyurt.com/index.html#contact"><i class="icon-paper-plane"></i><span id="menuContact"> İLETİŞİM</span></a></li>
                     </ul>
                 </div>
 
@@ -49,4 +57,3 @@
 
     </nav>
 </div>
-@Html.Partial("_hook_navBarBottom")

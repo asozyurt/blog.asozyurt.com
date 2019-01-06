@@ -1,7 +1,7 @@
 ﻿<div class="blog-widget">
     <h6 >Blogda Ara</h6>
-    <form class="search-form" name="searchForm" action="http://blog.asozyurt.com/search/" onsubmit="return validateSearchForm()">
-        <input type="text" title="Aranan:" name="searchText" value="" placeholder="Aranacak Kelime…">
+    <form class="search-form" name="searchForm" action="~/search/" onsubmit="return validateSearchForm()">
+        <input type="text" data-toggle="tooltip" title="Kategori, Etiket veya İçeriğe Göre Arayabilirsiniz" name="searchText" value="" placeholder="Aranacak Kelime…">
         <input type="submit" value="">
         <button type="submit" id="searchIcon"><i class="icon-search"></i></button>
     </form>

@@ -117,7 +117,14 @@ namespace SimpleBlogEngine
                          name: "page",
                          template: "page/{pageNumber:int}",
                          defaults: new { controller = "Home", action = "Index" });
-
+                routes.MapRoute(
+                        name: "rss",
+                        template: "/rss",
+                        defaults: new { controller = "Home", action = "Rss" });
+                routes.MapRoute(
+                       name: "atom",
+                       template: "/atom",
+                       defaults: new { controller = "Home", action = "Atom" });
                 routes.MapRoute(
                       name: "blog",
                       template: "{year:int}/{month:int}/{slug}",
@@ -136,6 +143,10 @@ namespace SimpleBlogEngine
                         name: "tag",
                         template: "tag/{tag}",
                         defaults: new { controller = "Tag", action = "Index" });
+                routes.MapRoute(
+                      name: "alltags",
+                      template: "tags",
+                      defaults: new { controller = "Tag", action = "All" });
                 routes.MapRoute(
                     name: "search",
                     template: "search/{searchText}",

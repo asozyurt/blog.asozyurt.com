@@ -20,7 +20,6 @@
         foreach (var blogPost in Model.PageOfBlogPosts)
         {
             var postURL = "//" + Context.Request.Host + Url.Action("ViewBlogPost", "Blog", new { year = blogPost.CreateDate.Year, Month = blogPost.CreateDate.Month.ToString("00"), Slug = blogPost.Slug });
-            var imageURL = "//" + Context.Request.Host + blogPost.Image.Replace("~", string.Empty);
             <div class="row">
                 <div class="post mb-30 mt-15 mr-1 ml-1 full-width">
                     <!--Post media-->
