@@ -65,12 +65,16 @@ namespace SimpleBlogEngine.Controllers
                     ((AtomFeedWriter)writer).WriteTitle("Asozyurt Blog");
                     ((AtomFeedWriter)writer).WriteSubtitle("Asozyurt Son Blog Yazıları");
                     ((AtomFeedWriter)writer).WriteRights("(c) 2019 Asozyurt");
+                    ((AtomFeedWriter)writer).WriteUpdated(_blogPostsConfig.Blogs.Where(x => x.Published).Max(x => x.CreateDate.Date).Date);
+                    ((AtomFeedWriter)writer).WriteGenerator("Asozyurt", "http://asozyurt.com", "1");
                 }
                 else
                 {
                     ((RssFeedWriter)writer).WriteTitle("Asozyurt Blog");
                     ((RssFeedWriter)writer).WriteDescription("Asozyurt Son Blog Yazıları");
                     ((RssFeedWriter)writer).WriteCopyright("(c) 2019 Asozyurt");
+                    ((RssFeedWriter)writer).WriteGenerator("Asozyurt");
+                    ((RssFeedWriter)writer).WritePubDate(_blogPostsConfig.Blogs.Where(x => x.Published).Max(x => x.CreateDate.Date).Date);
                 }
 
                 foreach (var post in _blogPostsConfig.Blogs.Where(x => x.Published))
