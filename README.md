@@ -20,6 +20,7 @@ I added some new features over the original repo and changed appearance. After t
 #### What's Next
 
 * Language Support
+* Emoji Extension For Markdig
 * Admin Panel 
 	* Secure Logon
 	* Blog Post Edit (_Prototype api is ready_)
