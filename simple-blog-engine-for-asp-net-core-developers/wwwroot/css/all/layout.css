@@ -3,7 +3,7 @@
 div.custom-nav {float:right; right:15px;}
 div.custom-nav a {display:inline-block; padding:5px 0px 5px 10px;}
 div.blogpost-meta .separator {padding:0 7px;}
-.blogpost-tags {margin-top:15px; font-size:80% !important;}
+.blogpost-tags {margin-top:15px;}
 .current-page {font-weight:bold;}
 blockquote.blockquote {font-size:19px; line-height:22px; padding-left:30px !important; margin:30px 0 30px 20px;}
 .alternate-background-link:hover {text-decoration:underline;}

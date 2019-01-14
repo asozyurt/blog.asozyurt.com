@@ -1,9 +1,14 @@
 ﻿{
   "SiteSettings": {
     "owner": "Ahmet Selçuk Özyurt",
-    "description": "Software Designer, Problem Solver",
-    "siteName": "asozyurt.com",
-    "siteURL": "www.asozyurt.com",
+    "nickname": "asozyurt",
+    "email": "asozyurt@gmail.com",
+    "description": "Ahmet Selçuk Özyurt Blog",
+    "siteName": "Asozyurt Blog",
+    "siteURL": "http://blog.asozyurt.com",
+    "version": "1.0",
+    "personalSiteURL": "http://asozyurt.com",
+    "copyright": "(c) 2019 Asozyurt",
     "theme": {
       "themeName": "default",
       "headerImage": "",

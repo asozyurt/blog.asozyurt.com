@@ -8,7 +8,9 @@ body {
     /*padding: 30px;*/
     color: #333;
 }
-
+.main-body p {
+    font-size: 15px;
+}
     body > *:first-child {
         margin-top: 0 !important;
     }

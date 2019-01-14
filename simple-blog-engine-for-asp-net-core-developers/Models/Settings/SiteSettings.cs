@@ -9,9 +9,14 @@ namespace SimpleBlogEngine.Models
 	{
 		public string Owner {get;set;}
 		public string SiteName {get;set;}
-		public string SiteURL {get;set;}
-		public string Description {get;set;}
-		public bool ShowViewHooks {get;set;}
+        public string Nickname { get; set; }
+        public string Email { get; set; }
+        public string SiteURL {get;set;}
+        public string PersonalSiteURL {get;set; }
+        public string Version { get;set; }
+        public string Description {get;set;}
+        public string Copyright { get; set; }
+        public bool ShowViewHooks {get;set;}
 		public Theme Theme {get;set;}
 		public SiteSettings_Meta MetaData {get;set;}
 		public DebugMode DebugMode {get;set;}

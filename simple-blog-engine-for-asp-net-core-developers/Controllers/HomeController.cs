@@ -5,9 +5,11 @@ using Microsoft.SyndicationFeed;
 using Microsoft.SyndicationFeed.Atom;
 using Microsoft.SyndicationFeed.Rss;
 using SimpleBlogEngine.Models;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Xml;
 
 namespace SimpleBlogEngine.Controllers
@@ -15,12 +17,15 @@ namespace SimpleBlogEngine.Controllers
     public class HomeController : BaseController
     {
         private BlogPostsSettings _blogPostsConfig;
+        private SiteSettings _siteSettings;
 
         public HomeController(
             IHostingEnvironment hostingEnvironment,
-            IOptionsMonitor<BlogPostsSettings> blogPostsConfig) : base(hostingEnvironment)
+            IOptionsMonitor<BlogPostsSettings> blogPostsConfig,
+            IOptionsMonitor<SiteSettings> siteSettings) : base(hostingEnvironment)
         {
             _blogPostsConfig = blogPostsConfig.CurrentValue;
+            _siteSettings = siteSettings.CurrentValue;
         }
 
         public IActionResult Index(int pageNumber = 1)
@@ -40,64 +45,101 @@ namespace SimpleBlogEngine.Controllers
 
         public ContentResult Rss()
         {
-            return new FeedResult(_blogPostsConfig, "Rss");
+            return FeedResult.Rss(_siteSettings, _blogPostsConfig);
         }
         public ContentResult Atom()
         {
-            return new FeedResult(_blogPostsConfig, "Atom");
+            return FeedResult.Atom(_siteSettings, _blogPostsConfig);
         }
     }
 
     public class FeedResult : ContentResult
     {
         private BlogPostsSettings _blogPostsConfig;
-        public FeedResult(BlogPostsSettings blogPostsConfig, string feedType)
+        private SiteSettings _siteSettings;
+
+        private IList<SyndicationItem> GetFeed()
         {
+            IList<SyndicationItem> result = new List<SyndicationItem>();
+
+            foreach (var post in _blogPostsConfig.Blogs.Where(x => x.Published))
+            {
+                var item = new SyndicationItem()
+                {
+                    Title = post.Title,
+                    Description = post.Description,
+                    Id = post.Slug,
+                    Published = post.CreateDate.Date,
+                    LastUpdated = post.CreateDate.Date
+                };
+
+                post.Categories.ForEach(x => item.AddCategory(new SyndicationCategory(x)));
+                item.AddLink(new SyndicationLink(new System.Uri(_siteSettings.SiteURL + "/" + post.UrlTail)));
+                item.AddContributor(new SyndicationPerson(post.Author, _siteSettings.Email));
+                result.Add(item);
+            }
+            return result;
+        }
+
+        private XmlFeedWriter InitializeAtomFeedWriter(XmlWriter xmlWriter)
+        {
+            var result = new AtomFeedWriter(xmlWriter);
+            result.WriteTitle(_siteSettings.SiteName);
+            result.WriteSubtitle(_siteSettings.Description);
+            result.WriteRights(_siteSettings.Copyright);
+            result.WriteUpdated(_blogPostsConfig.Blogs.Where(x => x.Published).First().CreateDate.Date);
+            result.WriteGenerator(_siteSettings.Nickname, _siteSettings.PersonalSiteURL, _siteSettings.Version);
+            return result;
+        }
+        private XmlFeedWriter InitializeRssFeedWriter(XmlWriter xmlWriter)
+        {
+            var result = new RssFeedWriter(xmlWriter);
+            result.WriteTitle(_siteSettings.SiteName);
+            result.WriteDescription(_siteSettings.Description);
+            result.WriteCopyright(_siteSettings.Copyright);
+            result.WriteGenerator(_siteSettings.Nickname);
+            result.WritePubDate(_blogPostsConfig.Blogs.Where(x => x.Published).First().CreateDate.Date);
+            return result;
+        }
+
+        private FeedResult(SiteSettings siteSettings, BlogPostsSettings blogPostsConfig, string feedType = "Rss")
+        {
+            _siteSettings = siteSettings;
             _blogPostsConfig = blogPostsConfig;
 
             var sw = new StringWriter();
-            using (XmlWriter xmlWriter = XmlWriter.Create(sw, new XmlWriterSettings() { Async = true, Indent = true }))
+            using (XmlWriter xmlWriter = XmlWriter.Create(sw, new XmlWriterSettings() { Async = true, Indent = true, Encoding = Encoding.UTF8 }))
             {
-                XmlFeedWriter writer = feedType == "Atom" ? (XmlFeedWriter)new AtomFeedWriter(xmlWriter) : new RssFeedWriter(xmlWriter);
-                // TODO: Make a cleaner solution, connect here to siteSettings
-                if (writer as AtomFeedWriter != null)
+                XmlFeedWriter writer = "Atom".Equals(feedType) ? InitializeAtomFeedWriter(xmlWriter) : InitializeRssFeedWriter(xmlWriter);
+                foreach (var post in GetFeed())
                 {
-                    ((AtomFeedWriter)writer).WriteTitle("Asozyurt Blog");
-                    ((AtomFeedWriter)writer).WriteSubtitle("Asozyurt Son Blog Yazıları");
-                    ((AtomFeedWriter)writer).WriteRights("(c) 2019 Asozyurt");
-                    ((AtomFeedWriter)writer).WriteUpdated(_blogPostsConfig.Blogs.Where(x => x.Published).Max(x => x.CreateDate.Date).Date);
-                    ((AtomFeedWriter)writer).WriteGenerator("Asozyurt", "http://asozyurt.com", "1");
-                }
-                else
-                {
-                    ((RssFeedWriter)writer).WriteTitle("Asozyurt Blog");
-                    ((RssFeedWriter)writer).WriteDescription("Asozyurt Son Blog Yazıları");
-                    ((RssFeedWriter)writer).WriteCopyright("(c) 2019 Asozyurt");
-                    ((RssFeedWriter)writer).WriteGenerator("Asozyurt");
-                    ((RssFeedWriter)writer).WritePubDate(_blogPostsConfig.Blogs.Where(x => x.Published).Max(x => x.CreateDate.Date).Date);
-                }
-
-                foreach (var post in _blogPostsConfig.Blogs.Where(x => x.Published))
-                {
-                    // Create item
-                    var item = new SyndicationItem()
-                    {
-                        Title = post.Title,
-                        Description = post.Description,
-                        Id = post.Slug,
-                        Published = post.CreateDate.Date,
-                        LastUpdated = post.CreateDate.Date
-                    };
-
-                    post.Categories.ForEach(x => item.AddCategory(new SyndicationCategory(x)));
-                    item.AddLink(new SyndicationLink(new System.Uri("http://blog.asozyurt.com/" + post.CreateDate.Year.ToString() + "/" + post.CreateDate.Month.ToString("00") + "/" + post.Slug)));
-                    item.AddContributor(new SyndicationPerson(post.Author, "asozyurt@gmail.com"));
-                    writer.Write(item);
+                    writer.Write(post);
                 }
                 xmlWriter.Flush();
             }
-            Content = sw.ToString();
-            ContentType = "application/xml";
+            Content = sw.ToString().Replace("utf-16", "utf-8");
+            ContentType = "application/rss+xml; charset=utf-8";
+        }
+
+        /// <summary>
+        /// Returns Rss Feed Result
+        /// </summary>
+        /// <param name="siteSettings"></param>
+        /// <param name="blogPostsConfig"></param>
+        /// <returns></returns>
+        public static FeedResult Rss(SiteSettings siteSettings, BlogPostsSettings blogPostsConfig)
+        {
+            return new FeedResult(siteSettings, blogPostsConfig);
+        }
+        /// <summary>
+        /// Returns Atom Feed Result
+        /// </summary>
+        /// <param name="siteSettings"></param>
+        /// <param name="blogPostsConfig"></param>
+        /// <returns></returns>
+        public static FeedResult Atom(SiteSettings siteSettings, BlogPostsSettings blogPostsConfig)
+        {
+            return new FeedResult(siteSettings, blogPostsConfig, "Atom");
         }
     }
 }

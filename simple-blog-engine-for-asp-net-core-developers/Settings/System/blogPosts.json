@@ -5,6 +5,46 @@
   "blogs": [
     {
       "published": true,
+      "title": "ASP.NET CORE İLE SİTEMİZE RSS - ATOM DESTEĞİ EKLEME",
+      "description": ".Net Core bu aralar favorim, iş yerimde de, şahsi projelerimde de bu teknoloji üzerine gidiyorum. Ve daha önce de belirttiğim gibi bu blog u .Net Core ile sevgili Gareth Elms abimizin yazdığı orijinal repository üzerine irili ufaklı bir çok özellik ekleyerek yazıyorum. Adım adım gelişmesini görmek, hem öğrenmek hem içerik üretmek çok hoşuma gidiyor.",
+      "image": "http://blog.asozyurt.com/img/rss-vs-atom.jpg",
+      "createdate": {
+        "year": "2019",
+        "month": "01",
+        "day": "15",
+        "hour": "08",
+        "minute": "05",
+        "second": "30",
+        "display": " 15 Oca 2019"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "aspnet-core-ile-sitemize-rss-atom-destegi-ekleme",
+      "view": "aspnet-core-ile-sitemize-rss-atom-destegi-ekleme.md",
+      "tags": [ ".Net Core", "Rss", "Atom", "Syndication", "Xml", "Asp.Net", "Mvc" ],
+      "categories": [ "Teknoloji", ".Net Core", "Syndication", "Rss", "Atom", "Asp.Net", "Mvc" ]
+    },
+    {
+      "published": true,
+      "title": "GITHUB ÜCRETSİZ VE SINIRSIZ PRIVATE REPOSITORY DEĞİŞİKLİĞİ",
+      "description": "Bu yılın ilk önemli haberi bazılarının Dark Side Of The Power dedikleri Microsoft'tan geldi. Bense tam tersini düşünüyorum, diğer alternatifleri kullanıp da sonradan Microsoft ortamına geri döndüğümde kotu çıkarıp pijama giymiş gibi oluyorum. Her görüşe saygım var elbet, sonuçta herkesin giydiğine kimse karışamaz.",
+      "image": "http://blog.asozyurt.com/img/github-coffee-cup.jpg",
+      "createdate": {
+        "year": "2019",
+        "month": "01",
+        "day": "08",
+        "hour": "23",
+        "minute": "15",
+        "second": "00",
+        "display": " 08 Oca 2019"
+      },
+      "Author": "Ahmet Selçuk Özyurt",
+      "slug": "github-ucretsiz-sinirsiz-private-repository-degisikligi",
+      "view": "github-ucretsiz-sinirsiz-private-repository-degisikligi.md",
+      "tags": [ "Github", "Free Private Repositories", "Microsoft" ],
+      "categories": [ "Teknoloji", "Haber" ]
+    },
+    {
+      "published": true,
       "title": ".NET CORE WEB İÇİN BUNDLING VE MINIFICATION",
       "description": "İrili ufaklı bütün projelerimizde birden fazla css ve js dosyaları kullanıyoruz. Kullandığımız temalardan, eklediğimiz üçüncü parti bileşenlerden ve kendi yazdığımız özelliklerden gelen bazen sayısı 20leri bile geçen dosyalar oluyor projemizde.",
       "image": "http://blog.asozyurt.com/img/bundle.jpg",
@@ -12,6 +52,9 @@
         "year": "2018",
         "month": "12",
         "day": "29",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": " 29 Ara 2018"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -29,6 +72,9 @@
         "year": "2018",
         "month": "12",
         "day": "15",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": " 15 Ara 2018"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -46,6 +92,9 @@
         "year": "2018",
         "month": "10",
         "day": "24",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": " 24 Eki 2018"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -63,6 +112,9 @@
         "year": "2017",
         "month": "03",
         "day": "21",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": "21 Mar 2017"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -80,6 +132,9 @@
         "year": "2017",
         "month": "04",
         "day": "13",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": "13 Nis 2017"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -97,6 +152,9 @@
         "year": "2017",
         "month": "08",
         "day": "17",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": "17 Agu 2017"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -114,6 +172,9 @@
         "year": "2017",
         "month": "08",
         "day": "23",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": " 23 Agu 2017"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -131,6 +192,9 @@
         "year": "2017",
         "month": "02",
         "day": "07",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": " 7 Şub 2017"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -148,6 +212,9 @@
         "year": "2017",
         "month": "02",
         "day": "03",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": " 3 Şub 2017"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -165,6 +232,9 @@
         "year": "2017",
         "month": "01",
         "day": "26",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": " 26 Oca 2017"
       },
       "Author": "Ahmet Selçuk Özyurt",
@@ -182,6 +252,9 @@
         "year": "2017",
         "month": "01",
         "day": "25",
+        "hour": "13",
+        "minute": "15",
+        "second": "00",
         "display": " 25 Oca 2017"
       },
       "Author": "Ahmet Selçuk Özyurt",

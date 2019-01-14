@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace SimpleBlogEngine.Models
 {
@@ -17,6 +18,17 @@ namespace SimpleBlogEngine.Models
         public string View { get; set; }
         public string Image { get; set; }
         public string Content { get; set; }
+
+        /// <summary>
+        /// Gets the prepared url which is tailing after site base address
+        /// </summary>
+        public string UrlTail
+        {
+            get
+            {
+                return CreateDate.Year.ToString() + "/" + CreateDate.Month.ToString("00") + "/" + Slug;
+            }
+        }
     }
 
     public class BlogPostDate
@@ -24,7 +36,10 @@ namespace SimpleBlogEngine.Models
         public int Year { get; set; }
         public int Month { get; set; }
         public int Day { get; set; }
+        public int Hour { get; set; }
+        public int Minute { get; set; }
+        public int Second { get; set; }
         public string Display { get; set; }
-        public DateTime Date { get { return new DateTime(Year, Month, Day); } }
+        public DateTime Date { get { return new DateTime(Year, Month, Day, Hour, Minute, Second); } }
     }
 }
