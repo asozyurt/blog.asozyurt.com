@@ -3,6 +3,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using NLog.Web;
 
 namespace SimpleBlogEngine
 {
@@ -10,10 +11,10 @@ namespace SimpleBlogEngine
 	{
 		public static void Main(string[] args)
 		{
-			BuildWebHost(args).Run();
+			BuildWebHost(args).Build().Run();
 		}
 
-		public static IWebHost BuildWebHost(string[] args)
+		public static IWebHostBuilder BuildWebHost(string[] args)
 		{
 			var myConfig = new ConfigurationBuilder()
 			  .SetBasePath(Directory.GetCurrentDirectory())
@@ -27,9 +28,9 @@ namespace SimpleBlogEngine
 					logging.AddConsole();
 					logging.AddDebug();
 			  })
+			  .UseNLog()
 			  .UseConfiguration(myConfig)
-			  .UseStartup<Startup>()
-			  .Build();
+			  .UseStartup<Startup>();
 		}
 	}
 }

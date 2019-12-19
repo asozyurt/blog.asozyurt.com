@@ -86,7 +86,7 @@ Görüldüğü gibi oldukça sade, _SyndicationItem_ nesnesi yaratıp blog postu
 ### Route eklemeleri
 Feed ler sitede genel olarak /feed /rss gibi path lere konuluyor. Bizde /rss ve /atom altına koyacağız. Bunun için gerekli mapping leri Startup sınıfımıza ekliyoruz.
 
-app.UseMvc(routes =>
+	app.UseMvc(routes =>
 	{
 		routes.MapRoute(
 				name: "rss",
@@ -99,4 +99,12 @@ app.UseMvc(routes =>
 
 ## BONUS - ESKİ SİSTEMLERE UYUM
 
-Kodlamayı bitirip de bazı Rss validator siteleri üzerinden rss ve atom sayfalarımı test etmek istediğimde kötü bir sürprizle karşılaştım. Hemen hemen tüm validator lar rss in beklenen formatta olmadığını söylüyordu.
+Kodlamayı bitirip de bazı Rss validator siteleri üzerinden rss ve atom sayfalarımı test etmek istediğimde kötü bir sürprizle karşılaştım. Hemen hemen tüm validator lar rss in beklenen formatta olmadığını söylüyordu. Bu sorunu düzeltmek için kullandığım yöntemi çok beğenmediğim için blog yazısını yazmam aylar aldı.
+Hızlı çözüm için FeedResult metodunda şu değişikliği yaptım
+
+	Content = sw.ToString().Replace("utf-16", "utf-8");
+	ContentType = "application/rss+xml; charset=utf-8";
+
+Dediğim gibi, gurur duyduğum bir fix değil ama en azından sorunu ortadan kaldırıyorç
+Daha sonra daha beğendiğim bir değişiklik yaparsam burayı da güncellerim, lakin şimdilik bu kadarıyla idare edeceğiz.
+

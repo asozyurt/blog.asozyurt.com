@@ -88,7 +88,6 @@ namespace SimpleBlogEngine
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
-
             blogPostConfigMonitor.CurrentValue.CalculateMetaData();
             blogPostConfigMonitor.OnChange(
                 values =>
@@ -157,7 +156,6 @@ namespace SimpleBlogEngine
             });
 
             loggerFactory.AddNLog();
-            app.AddNLogWeb();
         }
 
         private string GetPathToSettingsFile(string settingsFileName)
